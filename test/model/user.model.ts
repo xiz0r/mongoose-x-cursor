@@ -3,6 +3,7 @@ import paginationPlugin, { type PaginationModel } from '../../src'
 import { MemoryCacheProvider } from '../../src/cache'
 
 export interface User extends Document {
+  _id: mongoose.Types.ObjectId,
   username: string
   email: string
   createdAt: Date

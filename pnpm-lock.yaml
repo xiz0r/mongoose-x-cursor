@@ -4,21 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  mongoose:
-    specifier: ^8.0.3
-    version: 8.0.3
-
 devDependencies:
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.4.0
-    version: 6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.55.0)(typescript@5.3.3)
+    version: 6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.55.0)(typescript@4.9.5)
   eslint:
     specifier: ^8.55.0
     version: 8.55.0
   eslint-config-standard-with-typescript:
     specifier: ^42.0.0
-    version: 42.0.0(@typescript-eslint/eslint-plugin@6.14.0)(eslint-plugin-import@2.29.0)(eslint-plugin-n@16.4.0)(eslint-plugin-promise@6.1.1)(eslint@8.55.0)(typescript@5.3.3)
+    version: 42.0.0(@typescript-eslint/eslint-plugin@6.14.0)(eslint-plugin-import@2.29.0)(eslint-plugin-n@16.4.0)(eslint-plugin-promise@6.1.1)(eslint@8.55.0)(typescript@4.9.5)
   eslint-plugin-import:
     specifier: ^2.25.2
     version: 2.29.0(@typescript-eslint/parser@6.14.0)(eslint@8.55.0)
@@ -31,12 +26,15 @@ devDependencies:
   mongodb-memory-server:
     specifier: ^9.1.1
     version: 9.1.1
+  mongoose:
+    specifier: ^7.0.0
+    version: 7.6.7
   tsup:
     specifier: ^8.0.1
-    version: 8.0.1(typescript@5.3.3)
+    version: 8.0.1(typescript@4.9.5)
   typescript:
-    specifier: ^5.3.3
-    version: 5.3.3
+    specifier: ^4.9.5
+    version: 4.9.5
   vitest:
     specifier: ^1.0.4
     version: 1.0.4
@@ -49,155 +47,199 @@ packages:
     dev: true
 
   /@esbuild/android-arm64@0.19.8:
-    resolution: {integrity: sha512-B8JbS61bEunhfx8kasogFENgQfr/dIp+ggYXwTqdbMAgGDhRa3AaPpQMuQU0rNxDLECj6FhDzk1cF9WHMVwrtA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/android-arm64/-/android-arm64-0.19.8.tgz}
+    resolution: {integrity: sha512-B8JbS61bEunhfx8kasogFENgQfr/dIp+ggYXwTqdbMAgGDhRa3AaPpQMuQU0rNxDLECj6FhDzk1cF9WHMVwrtA==}
     engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [android]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/android-arm@0.19.8:
-    resolution: {integrity: sha512-31E2lxlGM1KEfivQl8Yf5aYU/mflz9g06H6S15ITUFQueMFtFjESRMoDSkvMo8thYvLBax+VKTPlpnx+sPicOA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/android-arm/-/android-arm-0.19.8.tgz}
+    resolution: {integrity: sha512-31E2lxlGM1KEfivQl8Yf5aYU/mflz9g06H6S15ITUFQueMFtFjESRMoDSkvMo8thYvLBax+VKTPlpnx+sPicOA==}
     engines: {node: '>=12'}
+    cpu: [arm]
+    os: [android]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/android-x64@0.19.8:
-    resolution: {integrity: sha512-rdqqYfRIn4jWOp+lzQttYMa2Xar3OK9Yt2fhOhzFXqg0rVWEfSclJvZq5fZslnz6ypHvVf3CT7qyf0A5pM682A==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/android-x64/-/android-x64-0.19.8.tgz}
+    resolution: {integrity: sha512-rdqqYfRIn4jWOp+lzQttYMa2Xar3OK9Yt2fhOhzFXqg0rVWEfSclJvZq5fZslnz6ypHvVf3CT7qyf0A5pM682A==}
     engines: {node: '>=12'}
+    cpu: [x64]
+    os: [android]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/darwin-arm64@0.19.8:
-    resolution: {integrity: sha512-RQw9DemMbIq35Bprbboyf8SmOr4UXsRVxJ97LgB55VKKeJOOdvsIPy0nFyF2l8U+h4PtBx/1kRf0BelOYCiQcw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/darwin-arm64/-/darwin-arm64-0.19.8.tgz}
+    resolution: {integrity: sha512-RQw9DemMbIq35Bprbboyf8SmOr4UXsRVxJ97LgB55VKKeJOOdvsIPy0nFyF2l8U+h4PtBx/1kRf0BelOYCiQcw==}
     engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/darwin-x64@0.19.8:
-    resolution: {integrity: sha512-3sur80OT9YdeZwIVgERAysAbwncom7b4bCI2XKLjMfPymTud7e/oY4y+ci1XVp5TfQp/bppn7xLw1n/oSQY3/Q==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/darwin-x64/-/darwin-x64-0.19.8.tgz}
+    resolution: {integrity: sha512-3sur80OT9YdeZwIVgERAysAbwncom7b4bCI2XKLjMfPymTud7e/oY4y+ci1XVp5TfQp/bppn7xLw1n/oSQY3/Q==}
     engines: {node: '>=12'}
+    cpu: [x64]
+    os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/freebsd-arm64@0.19.8:
-    resolution: {integrity: sha512-WAnPJSDattvS/XtPCTj1tPoTxERjcTpH6HsMr6ujTT+X6rylVe8ggxk8pVxzf5U1wh5sPODpawNicF5ta/9Tmw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/freebsd-arm64/-/freebsd-arm64-0.19.8.tgz}
+    resolution: {integrity: sha512-WAnPJSDattvS/XtPCTj1tPoTxERjcTpH6HsMr6ujTT+X6rylVe8ggxk8pVxzf5U1wh5sPODpawNicF5ta/9Tmw==}
     engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [freebsd]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/freebsd-x64@0.19.8:
-    resolution: {integrity: sha512-ICvZyOplIjmmhjd6mxi+zxSdpPTKFfyPPQMQTK/w+8eNK6WV01AjIztJALDtwNNfFhfZLux0tZLC+U9nSyA5Zg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/freebsd-x64/-/freebsd-x64-0.19.8.tgz}
+    resolution: {integrity: sha512-ICvZyOplIjmmhjd6mxi+zxSdpPTKFfyPPQMQTK/w+8eNK6WV01AjIztJALDtwNNfFhfZLux0tZLC+U9nSyA5Zg==}
     engines: {node: '>=12'}
+    cpu: [x64]
+    os: [freebsd]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/linux-arm64@0.19.8:
-    resolution: {integrity: sha512-z1zMZivxDLHWnyGOctT9JP70h0beY54xDDDJt4VpTX+iwA77IFsE1vCXWmprajJGa+ZYSqkSbRQ4eyLCpCmiCQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/linux-arm64/-/linux-arm64-0.19.8.tgz}
+    resolution: {integrity: sha512-z1zMZivxDLHWnyGOctT9JP70h0beY54xDDDJt4VpTX+iwA77IFsE1vCXWmprajJGa+ZYSqkSbRQ4eyLCpCmiCQ==}
     engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/linux-arm@0.19.8:
-    resolution: {integrity: sha512-H4vmI5PYqSvosPaTJuEppU9oz1dq2A7Mr2vyg5TF9Ga+3+MGgBdGzcyBP7qK9MrwFQZlvNyJrvz6GuCaj3OukQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/linux-arm/-/linux-arm-0.19.8.tgz}
+    resolution: {integrity: sha512-H4vmI5PYqSvosPaTJuEppU9oz1dq2A7Mr2vyg5TF9Ga+3+MGgBdGzcyBP7qK9MrwFQZlvNyJrvz6GuCaj3OukQ==}
     engines: {node: '>=12'}
+    cpu: [arm]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/linux-ia32@0.19.8:
-    resolution: {integrity: sha512-1a8suQiFJmZz1khm/rDglOc8lavtzEMRo0v6WhPgxkrjcU0LkHj+TwBrALwoz/OtMExvsqbbMI0ChyelKabSvQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/linux-ia32/-/linux-ia32-0.19.8.tgz}
+    resolution: {integrity: sha512-1a8suQiFJmZz1khm/rDglOc8lavtzEMRo0v6WhPgxkrjcU0LkHj+TwBrALwoz/OtMExvsqbbMI0ChyelKabSvQ==}
     engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/linux-loong64@0.19.8:
-    resolution: {integrity: sha512-fHZWS2JJxnXt1uYJsDv9+b60WCc2RlvVAy1F76qOLtXRO+H4mjt3Tr6MJ5l7Q78X8KgCFudnTuiQRBhULUyBKQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/linux-loong64/-/linux-loong64-0.19.8.tgz}
+    resolution: {integrity: sha512-fHZWS2JJxnXt1uYJsDv9+b60WCc2RlvVAy1F76qOLtXRO+H4mjt3Tr6MJ5l7Q78X8KgCFudnTuiQRBhULUyBKQ==}
     engines: {node: '>=12'}
+    cpu: [loong64]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/linux-mips64el@0.19.8:
-    resolution: {integrity: sha512-Wy/z0EL5qZYLX66dVnEg9riiwls5IYnziwuju2oUiuxVc+/edvqXa04qNtbrs0Ukatg5HEzqT94Zs7J207dN5Q==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/linux-mips64el/-/linux-mips64el-0.19.8.tgz}
+    resolution: {integrity: sha512-Wy/z0EL5qZYLX66dVnEg9riiwls5IYnziwuju2oUiuxVc+/edvqXa04qNtbrs0Ukatg5HEzqT94Zs7J207dN5Q==}
     engines: {node: '>=12'}
+    cpu: [mips64el]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/linux-ppc64@0.19.8:
-    resolution: {integrity: sha512-ETaW6245wK23YIEufhMQ3HSeHO7NgsLx8gygBVldRHKhOlD1oNeNy/P67mIh1zPn2Hr2HLieQrt6tWrVwuqrxg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/linux-ppc64/-/linux-ppc64-0.19.8.tgz}
+    resolution: {integrity: sha512-ETaW6245wK23YIEufhMQ3HSeHO7NgsLx8gygBVldRHKhOlD1oNeNy/P67mIh1zPn2Hr2HLieQrt6tWrVwuqrxg==}
     engines: {node: '>=12'}
+    cpu: [ppc64]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/linux-riscv64@0.19.8:
-    resolution: {integrity: sha512-T2DRQk55SgoleTP+DtPlMrxi/5r9AeFgkhkZ/B0ap99zmxtxdOixOMI570VjdRCs9pE4Wdkz7JYrsPvsl7eESg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/linux-riscv64/-/linux-riscv64-0.19.8.tgz}
+    resolution: {integrity: sha512-T2DRQk55SgoleTP+DtPlMrxi/5r9AeFgkhkZ/B0ap99zmxtxdOixOMI570VjdRCs9pE4Wdkz7JYrsPvsl7eESg==}
     engines: {node: '>=12'}
+    cpu: [riscv64]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/linux-s390x@0.19.8:
-    resolution: {integrity: sha512-NPxbdmmo3Bk7mbNeHmcCd7R7fptJaczPYBaELk6NcXxy7HLNyWwCyDJ/Xx+/YcNH7Im5dHdx9gZ5xIwyliQCbg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/linux-s390x/-/linux-s390x-0.19.8.tgz}
+    resolution: {integrity: sha512-NPxbdmmo3Bk7mbNeHmcCd7R7fptJaczPYBaELk6NcXxy7HLNyWwCyDJ/Xx+/YcNH7Im5dHdx9gZ5xIwyliQCbg==}
     engines: {node: '>=12'}
+    cpu: [s390x]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/linux-x64@0.19.8:
-    resolution: {integrity: sha512-lytMAVOM3b1gPypL2TRmZ5rnXl7+6IIk8uB3eLsV1JwcizuolblXRrc5ShPrO9ls/b+RTp+E6gbsuLWHWi2zGg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/linux-x64/-/linux-x64-0.19.8.tgz}
+    resolution: {integrity: sha512-lytMAVOM3b1gPypL2TRmZ5rnXl7+6IIk8uB3eLsV1JwcizuolblXRrc5ShPrO9ls/b+RTp+E6gbsuLWHWi2zGg==}
     engines: {node: '>=12'}
+    cpu: [x64]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/netbsd-x64@0.19.8:
-    resolution: {integrity: sha512-hvWVo2VsXz/8NVt1UhLzxwAfo5sioj92uo0bCfLibB0xlOmimU/DeAEsQILlBQvkhrGjamP0/el5HU76HAitGw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/netbsd-x64/-/netbsd-x64-0.19.8.tgz}
+    resolution: {integrity: sha512-hvWVo2VsXz/8NVt1UhLzxwAfo5sioj92uo0bCfLibB0xlOmimU/DeAEsQILlBQvkhrGjamP0/el5HU76HAitGw==}
     engines: {node: '>=12'}
+    cpu: [x64]
+    os: [netbsd]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/openbsd-x64@0.19.8:
-    resolution: {integrity: sha512-/7Y7u77rdvmGTxR83PgaSvSBJCC2L3Kb1M/+dmSIvRvQPXXCuC97QAwMugBNG0yGcbEGfFBH7ojPzAOxfGNkwQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/openbsd-x64/-/openbsd-x64-0.19.8.tgz}
+    resolution: {integrity: sha512-/7Y7u77rdvmGTxR83PgaSvSBJCC2L3Kb1M/+dmSIvRvQPXXCuC97QAwMugBNG0yGcbEGfFBH7ojPzAOxfGNkwQ==}
     engines: {node: '>=12'}
+    cpu: [x64]
+    os: [openbsd]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/sunos-x64@0.19.8:
-    resolution: {integrity: sha512-9Lc4s7Oi98GqFA4HzA/W2JHIYfnXbUYgekUP/Sm4BG9sfLjyv6GKKHKKVs83SMicBF2JwAX6A1PuOLMqpD001w==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/sunos-x64/-/sunos-x64-0.19.8.tgz}
+    resolution: {integrity: sha512-9Lc4s7Oi98GqFA4HzA/W2JHIYfnXbUYgekUP/Sm4BG9sfLjyv6GKKHKKVs83SMicBF2JwAX6A1PuOLMqpD001w==}
     engines: {node: '>=12'}
+    cpu: [x64]
+    os: [sunos]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/win32-arm64@0.19.8:
-    resolution: {integrity: sha512-rq6WzBGjSzihI9deW3fC2Gqiak68+b7qo5/3kmB6Gvbh/NYPA0sJhrnp7wgV4bNwjqM+R2AApXGxMO7ZoGhIJg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/win32-arm64/-/win32-arm64-0.19.8.tgz}
+    resolution: {integrity: sha512-rq6WzBGjSzihI9deW3fC2Gqiak68+b7qo5/3kmB6Gvbh/NYPA0sJhrnp7wgV4bNwjqM+R2AApXGxMO7ZoGhIJg==}
     engines: {node: '>=12'}
+    cpu: [arm64]
+    os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/win32-ia32@0.19.8:
-    resolution: {integrity: sha512-AIAbverbg5jMvJznYiGhrd3sumfwWs8572mIJL5NQjJa06P8KfCPWZQ0NwZbPQnbQi9OWSZhFVSUWjjIrn4hSw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/win32-ia32/-/win32-ia32-0.19.8.tgz}
+    resolution: {integrity: sha512-AIAbverbg5jMvJznYiGhrd3sumfwWs8572mIJL5NQjJa06P8KfCPWZQ0NwZbPQnbQi9OWSZhFVSUWjjIrn4hSw==}
     engines: {node: '>=12'}
+    cpu: [ia32]
+    os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
   /@esbuild/win32-x64@0.19.8:
-    resolution: {integrity: sha512-bfZ0cQ1uZs2PqpulNL5j/3w+GDhP36k1K5c38QdQg+Swy51jFZWWeIkteNsufkQxp986wnqRRsb/bHbY1WQ7TA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@esbuild/win32-x64/-/win32-x64-0.19.8.tgz}
+    resolution: {integrity: sha512-bfZ0cQ1uZs2PqpulNL5j/3w+GDhP36k1K5c38QdQg+Swy51jFZWWeIkteNsufkQxp986wnqRRsb/bHbY1WQ7TA==}
     engines: {node: '>=12'}
+    cpu: [x64]
+    os: [win32]
     requiresBuild: true
     dev: true
     optional: true
@@ -298,8 +340,11 @@ packages:
 
   /@mongodb-js/saslprep@1.1.1:
     resolution: {integrity: sha512-t7c5K033joZZMspnHg/gWPE4kandgc2OxE74aYOtGKfgB9VPuVJPix0H6fhmm2erj5PBJ21mqcx34lpIGtUCsQ==}
+    requiresBuild: true
     dependencies:
       sparse-bitfield: 3.0.3
+    dev: true
+    optional: true
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -323,79 +368,105 @@ packages:
     dev: true
 
   /@rollup/rollup-android-arm-eabi@4.7.0:
-    resolution: {integrity: sha512-rGku10pL1StFlFvXX5pEv88KdGW6DHUghsxyP/aRYb9eH+74jTGJ3U0S/rtlsQ4yYq1Hcc7AMkoJOb1xu29Fxw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.7.0.tgz}
+    resolution: {integrity: sha512-rGku10pL1StFlFvXX5pEv88KdGW6DHUghsxyP/aRYb9eH+74jTGJ3U0S/rtlsQ4yYq1Hcc7AMkoJOb1xu29Fxw==}
+    cpu: [arm]
+    os: [android]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-android-arm64@4.7.0:
-    resolution: {integrity: sha512-/EBw0cuJ/KVHiU2qyVYUhogXz7W2vXxBzeE9xtVIMC+RyitlY2vvaoysMUqASpkUtoNIHlnKTu/l7mXOPgnKOA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-android-arm64/-/rollup-android-arm64-4.7.0.tgz}
+    resolution: {integrity: sha512-/EBw0cuJ/KVHiU2qyVYUhogXz7W2vXxBzeE9xtVIMC+RyitlY2vvaoysMUqASpkUtoNIHlnKTu/l7mXOPgnKOA==}
+    cpu: [arm64]
+    os: [android]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-darwin-arm64@4.7.0:
-    resolution: {integrity: sha512-4VXG1bgvClJdbEYYjQ85RkOtwN8sqI3uCxH0HC5w9fKdqzRzgG39K7GAehATGS8jghA7zNoS5CjSKkDEqWmNZg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.7.0.tgz}
+    resolution: {integrity: sha512-4VXG1bgvClJdbEYYjQ85RkOtwN8sqI3uCxH0HC5w9fKdqzRzgG39K7GAehATGS8jghA7zNoS5CjSKkDEqWmNZg==}
+    cpu: [arm64]
+    os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-darwin-x64@4.7.0:
-    resolution: {integrity: sha512-/ImhO+T/RWJ96hUbxiCn2yWI0/MeQZV/aeukQQfhxiSXuZJfyqtdHPUPrc84jxCfXTxbJLmg4q+GBETeb61aNw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.7.0.tgz}
+    resolution: {integrity: sha512-/ImhO+T/RWJ96hUbxiCn2yWI0/MeQZV/aeukQQfhxiSXuZJfyqtdHPUPrc84jxCfXTxbJLmg4q+GBETeb61aNw==}
+    cpu: [x64]
+    os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-linux-arm-gnueabihf@4.7.0:
-    resolution: {integrity: sha512-zhye8POvTyUXlKbfPBVqoHy3t43gIgffY+7qBFqFxNqVtltQLtWeHNAbrMnXiLIfYmxcoL/feuLDote2tx+Qbg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-linux-arm-gnueabihf/-/rollup-linux-arm-gnueabihf-4.7.0.tgz}
+    resolution: {integrity: sha512-zhye8POvTyUXlKbfPBVqoHy3t43gIgffY+7qBFqFxNqVtltQLtWeHNAbrMnXiLIfYmxcoL/feuLDote2tx+Qbg==}
+    cpu: [arm]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-linux-arm64-gnu@4.7.0:
-    resolution: {integrity: sha512-RAdr3OJnUum6Vs83cQmKjxdTg31zJnLLTkjhcFt0auxM6jw00GD6IPFF42uasYPr/wGC6TRm7FsQiJyk0qIEfg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-linux-arm64-gnu/-/rollup-linux-arm64-gnu-4.7.0.tgz}
+    resolution: {integrity: sha512-RAdr3OJnUum6Vs83cQmKjxdTg31zJnLLTkjhcFt0auxM6jw00GD6IPFF42uasYPr/wGC6TRm7FsQiJyk0qIEfg==}
+    cpu: [arm64]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-linux-arm64-musl@4.7.0:
-    resolution: {integrity: sha512-nhWwYsiJwZGq7SyR3afS3EekEOsEAlrNMpPC4ZDKn5ooYSEjDLe9W/xGvoIV8/F/+HNIY6jY8lIdXjjxfxopXw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-linux-arm64-musl/-/rollup-linux-arm64-musl-4.7.0.tgz}
+    resolution: {integrity: sha512-nhWwYsiJwZGq7SyR3afS3EekEOsEAlrNMpPC4ZDKn5ooYSEjDLe9W/xGvoIV8/F/+HNIY6jY8lIdXjjxfxopXw==}
+    cpu: [arm64]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-linux-riscv64-gnu@4.7.0:
-    resolution: {integrity: sha512-rlfy5RnQG1aop1BL/gjdH42M2geMUyVQqd52GJVirqYc787A/XVvl3kQ5NG/43KXgOgE9HXgCaEH05kzQ+hLoA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-linux-riscv64-gnu/-/rollup-linux-riscv64-gnu-4.7.0.tgz}
+    resolution: {integrity: sha512-rlfy5RnQG1aop1BL/gjdH42M2geMUyVQqd52GJVirqYc787A/XVvl3kQ5NG/43KXgOgE9HXgCaEH05kzQ+hLoA==}
+    cpu: [riscv64]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-linux-x64-gnu@4.7.0:
-    resolution: {integrity: sha512-cCkoGlGWfBobdDtiiypxf79q6k3/iRVGu1HVLbD92gWV5WZbmuWJCgRM4x2N6i7ljGn1cGytPn9ZAfS8UwF6vg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.7.0.tgz}
+    resolution: {integrity: sha512-cCkoGlGWfBobdDtiiypxf79q6k3/iRVGu1HVLbD92gWV5WZbmuWJCgRM4x2N6i7ljGn1cGytPn9ZAfS8UwF6vg==}
+    cpu: [x64]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-linux-x64-musl@4.7.0:
-    resolution: {integrity: sha512-R2oBf2p/Arc1m+tWmiWbpHBjEcJnHVnv6bsypu4tcKdrYTpDfl1UT9qTyfkIL1iiii5D4WHxUHCg5X0pzqmxFg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.7.0.tgz}
+    resolution: {integrity: sha512-R2oBf2p/Arc1m+tWmiWbpHBjEcJnHVnv6bsypu4tcKdrYTpDfl1UT9qTyfkIL1iiii5D4WHxUHCg5X0pzqmxFg==}
+    cpu: [x64]
+    os: [linux]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-win32-arm64-msvc@4.7.0:
-    resolution: {integrity: sha512-CPtgaQL1aaPc80m8SCVEoxFGHxKYIt3zQYC3AccL/SqqiWXblo3pgToHuBwR8eCP2Toa+X1WmTR/QKFMykws7g==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-win32-arm64-msvc/-/rollup-win32-arm64-msvc-4.7.0.tgz}
+    resolution: {integrity: sha512-CPtgaQL1aaPc80m8SCVEoxFGHxKYIt3zQYC3AccL/SqqiWXblo3pgToHuBwR8eCP2Toa+X1WmTR/QKFMykws7g==}
+    cpu: [arm64]
+    os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-win32-ia32-msvc@4.7.0:
-    resolution: {integrity: sha512-pmioUlttNh9GXF5x2CzNa7Z8kmRTyhEzzAC+2WOOapjewMbl+3tGuAnxbwc5JyG8Jsz2+hf/QD/n5VjimOZ63g==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-win32-ia32-msvc/-/rollup-win32-ia32-msvc-4.7.0.tgz}
+    resolution: {integrity: sha512-pmioUlttNh9GXF5x2CzNa7Z8kmRTyhEzzAC+2WOOapjewMbl+3tGuAnxbwc5JyG8Jsz2+hf/QD/n5VjimOZ63g==}
+    cpu: [ia32]
+    os: [win32]
     requiresBuild: true
     dev: true
     optional: true
 
   /@rollup/rollup-win32-x64-msvc@4.7.0:
-    resolution: {integrity: sha512-SeZzC2QhhdBQUm3U0c8+c/P6UlRyBcLL2Xp5KX7z46WXZxzR8RJSIWL9wSUeBTgxog5LTPJuPj0WOT9lvrtP7Q==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.7.0.tgz}
+    resolution: {integrity: sha512-SeZzC2QhhdBQUm3U0c8+c/P6UlRyBcLL2Xp5KX7z46WXZxzR8RJSIWL9wSUeBTgxog5LTPJuPj0WOT9lvrtP7Q==}
+    cpu: [x64]
+    os: [win32]
     requiresBuild: true
     dev: true
     optional: true
@@ -405,33 +476,36 @@ packages:
     dev: true
 
   /@types/json-schema@7.0.15:
-    resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@types/json-schema/-/json-schema-7.0.15.tgz}
+    resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@types/json-schema/-/json-schema-7.0.15.tgz}
     dev: true
 
   /@types/json5@0.0.29:
-    resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@types/json5/-/json5-0.0.29.tgz}
+    resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@types/json5/-/json5-0.0.29.tgz}
     dev: true
 
   /@types/node@20.10.4:
     resolution: {integrity: sha512-D08YG6rr8X90YB56tSIuBaddy/UXAA9RKJoFvrsnogAum/0pmjkgi4+2nx96A330FmioegBWmEYQ+syqCFaveg==}
     dependencies:
       undici-types: 5.26.5
+    dev: true
 
   /@types/semver@7.5.6:
-    resolution: {integrity: sha512-dn1l8LaMea/IjDoHNd9J52uBbInB796CDffS6VdIxvqYCPSG0V0DzHp76GpaWnlhg88uYyPbXCDIowa86ybd5A==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@types/semver/-/semver-7.5.6.tgz}
+    resolution: {integrity: sha512-dn1l8LaMea/IjDoHNd9J52uBbInB796CDffS6VdIxvqYCPSG0V0DzHp76GpaWnlhg88uYyPbXCDIowa86ybd5A==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@types/semver/-/semver-7.5.6.tgz}
     dev: true
 
   /@types/webidl-conversions@7.0.3:
     resolution: {integrity: sha512-CiJJvcRtIgzadHCYXw7dqEnMNRjhGZlYK05Mj9OyktqV8uVT8fD2BFOB7S1uwBE3Kj2Z+4UyPmFw/Ixgw/LAlA==}
+    dev: true
 
   /@types/whatwg-url@8.2.2:
     resolution: {integrity: sha512-FtQu10RWgn3D9U4aazdwIE2yzphmTJREDqNdODHrbrZmmMqI0vMheC/6NE/J1Yveaj8H+ela+YwWTjq5PGmuhA==}
     dependencies:
       '@types/node': 20.10.4
       '@types/webidl-conversions': 7.0.3
+    dev: true
 
-  /@typescript-eslint/eslint-plugin@6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.55.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-1ZJBykBCXaSHG94vMMKmiHoL0MhNHKSVlcHVYZNw+BKxufhqQVTOawNpwwI1P5nIFZ/4jLVop0mcY6mJJDFNaw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/eslint-plugin/-/eslint-plugin-6.14.0.tgz}
+  /@typescript-eslint/eslint-plugin@6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.55.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-1ZJBykBCXaSHG94vMMKmiHoL0MhNHKSVlcHVYZNw+BKxufhqQVTOawNpwwI1P5nIFZ/4jLVop0mcY6mJJDFNaw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/eslint-plugin/-/eslint-plugin-6.14.0.tgz}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       '@typescript-eslint/parser': ^6.0.0 || ^6.0.0-alpha
@@ -442,10 +516,10 @@ packages:
         optional: true
     dependencies:
       '@eslint-community/regexpp': 4.10.0
-      '@typescript-eslint/parser': 6.14.0(eslint@8.55.0)(typescript@5.3.3)
+      '@typescript-eslint/parser': 6.14.0(eslint@8.55.0)(typescript@4.9.5)
       '@typescript-eslint/scope-manager': 6.14.0
-      '@typescript-eslint/type-utils': 6.14.0(eslint@8.55.0)(typescript@5.3.3)
-      '@typescript-eslint/utils': 6.14.0(eslint@8.55.0)(typescript@5.3.3)
+      '@typescript-eslint/type-utils': 6.14.0(eslint@8.55.0)(typescript@4.9.5)
+      '@typescript-eslint/utils': 6.14.0(eslint@8.55.0)(typescript@4.9.5)
       '@typescript-eslint/visitor-keys': 6.14.0
       debug: 4.3.4
       eslint: 8.55.0
@@ -453,14 +527,14 @@ packages:
       ignore: 5.3.0
       natural-compare: 1.4.0
       semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.3.3)
-      typescript: 5.3.3
+      ts-api-utils: 1.0.3(typescript@4.9.5)
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/parser@6.14.0(eslint@8.55.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-QjToC14CKacd4Pa7JK4GeB/vHmWFJckec49FR4hmIRf97+KXole0T97xxu9IFiPxVQ1DBWrQ5wreLwAGwWAVQA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/parser/-/parser-6.14.0.tgz}
+  /@typescript-eslint/parser@6.14.0(eslint@8.55.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-QjToC14CKacd4Pa7JK4GeB/vHmWFJckec49FR4hmIRf97+KXole0T97xxu9IFiPxVQ1DBWrQ5wreLwAGwWAVQA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/parser/-/parser-6.14.0.tgz}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
@@ -471,25 +545,25 @@ packages:
     dependencies:
       '@typescript-eslint/scope-manager': 6.14.0
       '@typescript-eslint/types': 6.14.0
-      '@typescript-eslint/typescript-estree': 6.14.0(typescript@5.3.3)
+      '@typescript-eslint/typescript-estree': 6.14.0(typescript@4.9.5)
       '@typescript-eslint/visitor-keys': 6.14.0
       debug: 4.3.4
       eslint: 8.55.0
-      typescript: 5.3.3
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
     dev: true
 
   /@typescript-eslint/scope-manager@6.14.0:
-    resolution: {integrity: sha512-VT7CFWHbZipPncAZtuALr9y3EuzY1b1t1AEkIq2bTXUPKw+pHoXflGNG5L+Gv6nKul1cz1VH8fz16IThIU0tdg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/scope-manager/-/scope-manager-6.14.0.tgz}
+    resolution: {integrity: sha512-VT7CFWHbZipPncAZtuALr9y3EuzY1b1t1AEkIq2bTXUPKw+pHoXflGNG5L+Gv6nKul1cz1VH8fz16IThIU0tdg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/scope-manager/-/scope-manager-6.14.0.tgz}
     engines: {node: ^16.0.0 || >=18.0.0}
     dependencies:
       '@typescript-eslint/types': 6.14.0
       '@typescript-eslint/visitor-keys': 6.14.0
     dev: true
 
-  /@typescript-eslint/type-utils@6.14.0(eslint@8.55.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-x6OC9Q7HfYKqjnuNu5a7kffIYs3No30isapRBJl1iCHLitD8O0lFbRcVGiOcuyN837fqXzPZ1NS10maQzZMKqw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/type-utils/-/type-utils-6.14.0.tgz}
+  /@typescript-eslint/type-utils@6.14.0(eslint@8.55.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-x6OC9Q7HfYKqjnuNu5a7kffIYs3No30isapRBJl1iCHLitD8O0lFbRcVGiOcuyN837fqXzPZ1NS10maQzZMKqw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/type-utils/-/type-utils-6.14.0.tgz}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
@@ -498,23 +572,23 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/typescript-estree': 6.14.0(typescript@5.3.3)
-      '@typescript-eslint/utils': 6.14.0(eslint@8.55.0)(typescript@5.3.3)
+      '@typescript-eslint/typescript-estree': 6.14.0(typescript@4.9.5)
+      '@typescript-eslint/utils': 6.14.0(eslint@8.55.0)(typescript@4.9.5)
       debug: 4.3.4
       eslint: 8.55.0
-      ts-api-utils: 1.0.3(typescript@5.3.3)
-      typescript: 5.3.3
+      ts-api-utils: 1.0.3(typescript@4.9.5)
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
     dev: true
 
   /@typescript-eslint/types@6.14.0:
-    resolution: {integrity: sha512-uty9H2K4Xs8E47z3SnXEPRNDfsis8JO27amp2GNCnzGETEW3yTqEIVg5+AI7U276oGF/tw6ZA+UesxeQ104ceA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/types/-/types-6.14.0.tgz}
+    resolution: {integrity: sha512-uty9H2K4Xs8E47z3SnXEPRNDfsis8JO27amp2GNCnzGETEW3yTqEIVg5+AI7U276oGF/tw6ZA+UesxeQ104ceA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/types/-/types-6.14.0.tgz}
     engines: {node: ^16.0.0 || >=18.0.0}
     dev: true
 
-  /@typescript-eslint/typescript-estree@6.14.0(typescript@5.3.3):
-    resolution: {integrity: sha512-yPkaLwK0yH2mZKFE/bXkPAkkFgOv15GJAUzgUVonAbv0Hr4PK/N2yaA/4XQbTZQdygiDkpt5DkxPELqHguNvyw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/typescript-estree/-/typescript-estree-6.14.0.tgz}
+  /@typescript-eslint/typescript-estree@6.14.0(typescript@4.9.5):
+    resolution: {integrity: sha512-yPkaLwK0yH2mZKFE/bXkPAkkFgOv15GJAUzgUVonAbv0Hr4PK/N2yaA/4XQbTZQdygiDkpt5DkxPELqHguNvyw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/typescript-estree/-/typescript-estree-6.14.0.tgz}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       typescript: '*'
@@ -528,14 +602,14 @@ packages:
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.3.3)
-      typescript: 5.3.3
+      ts-api-utils: 1.0.3(typescript@4.9.5)
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/utils@6.14.0(eslint@8.55.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-XwRTnbvRr7Ey9a1NT6jqdKX8y/atWG+8fAIu3z73HSP8h06i3r/ClMhmaF/RGWGW1tHJEwij1uEg2GbEmPYvYg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/utils/-/utils-6.14.0.tgz}
+  /@typescript-eslint/utils@6.14.0(eslint@8.55.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-XwRTnbvRr7Ey9a1NT6jqdKX8y/atWG+8fAIu3z73HSP8h06i3r/ClMhmaF/RGWGW1tHJEwij1uEg2GbEmPYvYg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/utils/-/utils-6.14.0.tgz}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
@@ -545,7 +619,7 @@ packages:
       '@types/semver': 7.5.6
       '@typescript-eslint/scope-manager': 6.14.0
       '@typescript-eslint/types': 6.14.0
-      '@typescript-eslint/typescript-estree': 6.14.0(typescript@5.3.3)
+      '@typescript-eslint/typescript-estree': 6.14.0(typescript@4.9.5)
       eslint: 8.55.0
       semver: 7.5.4
     transitivePeerDependencies:
@@ -554,7 +628,7 @@ packages:
     dev: true
 
   /@typescript-eslint/visitor-keys@6.14.0:
-    resolution: {integrity: sha512-fB5cw6GRhJUz03MrROVuj5Zm/Q+XWlVdIsFj+Zb1Hvqouc8t+XP2H5y53QYU/MGtd2dPg6/vJJlhoX3xc2ehfw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/visitor-keys/-/visitor-keys-6.14.0.tgz}
+    resolution: {integrity: sha512-fB5cw6GRhJUz03MrROVuj5Zm/Q+XWlVdIsFj+Zb1Hvqouc8t+XP2H5y53QYU/MGtd2dPg6/vJJlhoX3xc2ehfw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/@typescript-eslint/visitor-keys/-/visitor-keys-6.14.0.tgz}
     engines: {node: ^16.0.0 || >=18.0.0}
     dependencies:
       '@typescript-eslint/types': 6.14.0
@@ -674,14 +748,14 @@ packages:
     dev: true
 
   /array-buffer-byte-length@1.0.0:
-    resolution: {integrity: sha512-LPuwb2P+NrQw3XhxGc36+XSvuBPopovXYTR9Ew++Du9Yb/bx5AzBfrIsBoj0EZUifjQU+sHL21sseZ3jerWO/A==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/array-buffer-byte-length/-/array-buffer-byte-length-1.0.0.tgz}
+    resolution: {integrity: sha512-LPuwb2P+NrQw3XhxGc36+XSvuBPopovXYTR9Ew++Du9Yb/bx5AzBfrIsBoj0EZUifjQU+sHL21sseZ3jerWO/A==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/array-buffer-byte-length/-/array-buffer-byte-length-1.0.0.tgz}
     dependencies:
       call-bind: 1.0.5
       is-array-buffer: 3.0.2
     dev: true
 
   /array-includes@3.1.7:
-    resolution: {integrity: sha512-dlcsNBIiWhPkHdOEEKnehA+RNUWDc4UqFtnIXU4uuYDPtA4LDkr7qip2p0VvFAEXNDr0yWZ9PJyIRiGjRLQzwQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/array-includes/-/array-includes-3.1.7.tgz}
+    resolution: {integrity: sha512-dlcsNBIiWhPkHdOEEKnehA+RNUWDc4UqFtnIXU4uuYDPtA4LDkr7qip2p0VvFAEXNDr0yWZ9PJyIRiGjRLQzwQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/array-includes/-/array-includes-3.1.7.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -697,7 +771,7 @@ packages:
     dev: true
 
   /array.prototype.findlastindex@1.2.3:
-    resolution: {integrity: sha512-LzLoiOMAxvy+Gd3BAq3B7VeIgPdo+Q8hthvKtXybMvRV0jrXfJM/t8mw7nNlpEcVlVUnCnM2KSX4XU5HmpodOA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/array.prototype.findlastindex/-/array.prototype.findlastindex-1.2.3.tgz}
+    resolution: {integrity: sha512-LzLoiOMAxvy+Gd3BAq3B7VeIgPdo+Q8hthvKtXybMvRV0jrXfJM/t8mw7nNlpEcVlVUnCnM2KSX4XU5HmpodOA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/array.prototype.findlastindex/-/array.prototype.findlastindex-1.2.3.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -708,7 +782,7 @@ packages:
     dev: true
 
   /array.prototype.flat@1.3.2:
-    resolution: {integrity: sha512-djYB+Zx2vLewY8RWlNCUdHjDXs2XOgm602S9E7P/UpHgfeHL00cRiIF+IN/G/aUJ7kGPb6yO/ErDI5V2s8iycA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/array.prototype.flat/-/array.prototype.flat-1.3.2.tgz}
+    resolution: {integrity: sha512-djYB+Zx2vLewY8RWlNCUdHjDXs2XOgm602S9E7P/UpHgfeHL00cRiIF+IN/G/aUJ7kGPb6yO/ErDI5V2s8iycA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/array.prototype.flat/-/array.prototype.flat-1.3.2.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -718,7 +792,7 @@ packages:
     dev: true
 
   /array.prototype.flatmap@1.3.2:
-    resolution: {integrity: sha512-Ewyx0c9PmpcsByhSW4r+9zDU7sGjFc86qf/kKtuSCRdhfbk0SNLLkaT5qvcHnRGgc5NP/ly/y+qkXkqONX54CQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/array.prototype.flatmap/-/array.prototype.flatmap-1.3.2.tgz}
+    resolution: {integrity: sha512-Ewyx0c9PmpcsByhSW4r+9zDU7sGjFc86qf/kKtuSCRdhfbk0SNLLkaT5qvcHnRGgc5NP/ly/y+qkXkqONX54CQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/array.prototype.flatmap/-/array.prototype.flatmap-1.3.2.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -728,7 +802,7 @@ packages:
     dev: true
 
   /arraybuffer.prototype.slice@1.0.2:
-    resolution: {integrity: sha512-yMBKppFur/fbHu9/6USUe03bZ4knMYiwFBcyiaXB8Go0qNehwX6inYPzK9U0NeQvGxKthcmHcaR8P5MStSRBAw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/arraybuffer.prototype.slice/-/arraybuffer.prototype.slice-1.0.2.tgz}
+    resolution: {integrity: sha512-yMBKppFur/fbHu9/6USUe03bZ4knMYiwFBcyiaXB8Go0qNehwX6inYPzK9U0NeQvGxKthcmHcaR8P5MStSRBAw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/arraybuffer.prototype.slice/-/arraybuffer.prototype.slice-1.0.2.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       array-buffer-byte-length: 1.0.0
@@ -751,7 +825,7 @@ packages:
     dev: true
 
   /available-typed-arrays@1.0.5:
-    resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz}
+    resolution: {integrity: sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz}
     engines: {node: '>= 0.4'}
     dev: true
 
@@ -787,22 +861,17 @@ packages:
     engines: {node: '>=14.20.1'}
     dev: true
 
-  /bson@6.2.0:
-    resolution: {integrity: sha512-ID1cI+7bazPDyL9wYy9GaQ8gEEohWvcUl/Yf0dIdutJxnmInEEyCsb4awy/OiBfall7zBA179Pahi3vCdFze3Q==}
-    engines: {node: '>=16.20.1'}
-    dev: false
-
   /buffer-crc32@0.2.13:
     resolution: {integrity: sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==}
     dev: true
 
   /builtin-modules@3.3.0:
-    resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/builtin-modules/-/builtin-modules-3.3.0.tgz}
+    resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/builtin-modules/-/builtin-modules-3.3.0.tgz}
     engines: {node: '>=6'}
     dev: true
 
   /builtins@5.0.1:
-    resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/builtins/-/builtins-5.0.1.tgz}
+    resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/builtins/-/builtins-5.0.1.tgz}
     dependencies:
       semver: 7.5.4
     dev: true
@@ -823,7 +892,7 @@ packages:
     dev: true
 
   /call-bind@1.0.5:
-    resolution: {integrity: sha512-C3nQxfFZxFRVoJoGKKI8y3MOEo129NQ+FgQ08iye+Mk4zNZZGdjfs06bVTr+DBSlA66Q2VEcMki/cUCP4SercQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/call-bind/-/call-bind-1.0.5.tgz}
+    resolution: {integrity: sha512-C3nQxfFZxFRVoJoGKKI8y3MOEo129NQ+FgQ08iye+Mk4zNZZGdjfs06bVTr+DBSlA66Q2VEcMki/cUCP4SercQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/call-bind/-/call-bind-1.0.5.tgz}
     dependencies:
       function-bind: 1.1.2
       get-intrinsic: 1.2.2
@@ -916,7 +985,7 @@ packages:
     dev: true
 
   /debug@3.2.7:
-    resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/debug/-/debug-3.2.7.tgz}
+    resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/debug/-/debug-3.2.7.tgz}
     peerDependencies:
       supports-color: '*'
     peerDependenciesMeta:
@@ -936,6 +1005,7 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
+    dev: true
 
   /deep-eql@4.1.3:
     resolution: {integrity: sha512-WaEtAOpRA1MQ0eohqZjpGD8zdI0Ovsm8mmFhaDN8dvDZzyoUMcYDnf5Y6iu7HTXxf8JDS23qWa4a+hKCDyOPzw==}
@@ -949,7 +1019,7 @@ packages:
     dev: true
 
   /define-data-property@1.1.1:
-    resolution: {integrity: sha512-E7uGkTzkk1d0ByLeSc6ZsFS79Axg+m1P/VsgYsxHgiuc3tFSj+MjMIwe90FC4lOAZzNBdY7kkO2P2wKdsQ1vgQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/define-data-property/-/define-data-property-1.1.1.tgz}
+    resolution: {integrity: sha512-E7uGkTzkk1d0ByLeSc6ZsFS79Axg+m1P/VsgYsxHgiuc3tFSj+MjMIwe90FC4lOAZzNBdY7kkO2P2wKdsQ1vgQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/define-data-property/-/define-data-property-1.1.1.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       get-intrinsic: 1.2.2
@@ -958,7 +1028,7 @@ packages:
     dev: true
 
   /define-properties@1.2.1:
-    resolution: {integrity: sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/define-properties/-/define-properties-1.2.1.tgz}
+    resolution: {integrity: sha512-8QmQKqEASLd5nx0U1B1okLElbUuuttJ/AnYmRXbbbGDWh6uS208EjD4Xqq/I9wK7u0v6O08XhTWnt5XtEbR6Dg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/define-properties/-/define-properties-1.2.1.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       define-data-property: 1.1.1
@@ -979,7 +1049,7 @@ packages:
     dev: true
 
   /doctrine@2.1.0:
-    resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/doctrine/-/doctrine-2.1.0.tgz}
+    resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/doctrine/-/doctrine-2.1.0.tgz}
     engines: {node: '>=0.10.0'}
     dependencies:
       esutils: 2.0.3
@@ -993,7 +1063,7 @@ packages:
     dev: true
 
   /es-abstract@1.22.3:
-    resolution: {integrity: sha512-eiiY8HQeYfYH2Con2berK+To6GrK2RxbPawDkGq4UiCQQfZHb6wX9qQqkbpPqaxQFcl8d9QzZqo0tGE0VcrdwA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/es-abstract/-/es-abstract-1.22.3.tgz}
+    resolution: {integrity: sha512-eiiY8HQeYfYH2Con2berK+To6GrK2RxbPawDkGq4UiCQQfZHb6wX9qQqkbpPqaxQFcl8d9QzZqo0tGE0VcrdwA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/es-abstract/-/es-abstract-1.22.3.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       array-buffer-byte-length: 1.0.0
@@ -1038,7 +1108,7 @@ packages:
     dev: true
 
   /es-set-tostringtag@2.0.2:
-    resolution: {integrity: sha512-BuDyupZt65P9D2D2vA/zqcI3G5xRsklm5N3xCwuiy+/vKy8i0ifdsQP1sLgO4tZDSCaQUSnmC48khknGMV3D2Q==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/es-set-tostringtag/-/es-set-tostringtag-2.0.2.tgz}
+    resolution: {integrity: sha512-BuDyupZt65P9D2D2vA/zqcI3G5xRsklm5N3xCwuiy+/vKy8i0ifdsQP1sLgO4tZDSCaQUSnmC48khknGMV3D2Q==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/es-set-tostringtag/-/es-set-tostringtag-2.0.2.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       get-intrinsic: 1.2.2
@@ -1047,13 +1117,13 @@ packages:
     dev: true
 
   /es-shim-unscopables@1.0.2:
-    resolution: {integrity: sha512-J3yBRXCzDu4ULnQwxyToo/OjdMx6akgVC7K6few0a7F/0wLtmKKN7I73AH5T2836UuXRqN7Qg+IIUw/+YJksRw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/es-shim-unscopables/-/es-shim-unscopables-1.0.2.tgz}
+    resolution: {integrity: sha512-J3yBRXCzDu4ULnQwxyToo/OjdMx6akgVC7K6few0a7F/0wLtmKKN7I73AH5T2836UuXRqN7Qg+IIUw/+YJksRw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/es-shim-unscopables/-/es-shim-unscopables-1.0.2.tgz}
     dependencies:
       hasown: 2.0.0
     dev: true
 
   /es-to-primitive@1.2.1:
-    resolution: {integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/es-to-primitive/-/es-to-primitive-1.2.1.tgz}
+    resolution: {integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/es-to-primitive/-/es-to-primitive-1.2.1.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       is-callable: 1.2.7
@@ -1097,7 +1167,7 @@ packages:
     dev: true
 
   /eslint-compat-utils@0.1.2(eslint@8.55.0):
-    resolution: {integrity: sha512-Jia4JDldWnFNIru1Ehx1H5s9/yxiRHY/TimCuUc0jNexew3cF1gI6CYZil1ociakfWO3rRqFjl1mskBblB3RYg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-compat-utils/-/eslint-compat-utils-0.1.2.tgz}
+    resolution: {integrity: sha512-Jia4JDldWnFNIru1Ehx1H5s9/yxiRHY/TimCuUc0jNexew3cF1gI6CYZil1ociakfWO3rRqFjl1mskBblB3RYg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-compat-utils/-/eslint-compat-utils-0.1.2.tgz}
     engines: {node: '>=12'}
     peerDependencies:
       eslint: '>=6.0.0'
@@ -1105,8 +1175,8 @@ packages:
       eslint: 8.55.0
     dev: true
 
-  /eslint-config-standard-with-typescript@42.0.0(@typescript-eslint/eslint-plugin@6.14.0)(eslint-plugin-import@2.29.0)(eslint-plugin-n@16.4.0)(eslint-plugin-promise@6.1.1)(eslint@8.55.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-m1/2g/Sicun1uFZOFigJVeOqo9fE7OkMsNtilcpHwdCdcGr21qsGqYiyxYSvvHfJwY7w5OTQH0hxk8sM2N5Ohg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-config-standard-with-typescript/-/eslint-config-standard-with-typescript-42.0.0.tgz}
+  /eslint-config-standard-with-typescript@42.0.0(@typescript-eslint/eslint-plugin@6.14.0)(eslint-plugin-import@2.29.0)(eslint-plugin-n@16.4.0)(eslint-plugin-promise@6.1.1)(eslint@8.55.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-m1/2g/Sicun1uFZOFigJVeOqo9fE7OkMsNtilcpHwdCdcGr21qsGqYiyxYSvvHfJwY7w5OTQH0hxk8sM2N5Ohg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-config-standard-with-typescript/-/eslint-config-standard-with-typescript-42.0.0.tgz}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^6.4.0
       eslint: ^8.0.1
@@ -1115,20 +1185,20 @@ packages:
       eslint-plugin-promise: ^6.0.0
       typescript: '*'
     dependencies:
-      '@typescript-eslint/eslint-plugin': 6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.55.0)(typescript@5.3.3)
-      '@typescript-eslint/parser': 6.14.0(eslint@8.55.0)(typescript@5.3.3)
+      '@typescript-eslint/eslint-plugin': 6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.55.0)(typescript@4.9.5)
+      '@typescript-eslint/parser': 6.14.0(eslint@8.55.0)(typescript@4.9.5)
       eslint: 8.55.0
       eslint-config-standard: 17.1.0(eslint-plugin-import@2.29.0)(eslint-plugin-n@16.4.0)(eslint-plugin-promise@6.1.1)(eslint@8.55.0)
       eslint-plugin-import: 2.29.0(@typescript-eslint/parser@6.14.0)(eslint@8.55.0)
       eslint-plugin-n: 16.4.0(eslint@8.55.0)
       eslint-plugin-promise: 6.1.1(eslint@8.55.0)
-      typescript: 5.3.3
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
     dev: true
 
   /eslint-config-standard@17.1.0(eslint-plugin-import@2.29.0)(eslint-plugin-n@16.4.0)(eslint-plugin-promise@6.1.1)(eslint@8.55.0):
-    resolution: {integrity: sha512-IwHwmaBNtDK4zDHQukFDW5u/aTb8+meQWZvNFWkiGmbWjD6bqyuSSBxxXKkCftCUzc1zwCH2m/baCNDLGmuO5Q==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-config-standard/-/eslint-config-standard-17.1.0.tgz}
+    resolution: {integrity: sha512-IwHwmaBNtDK4zDHQukFDW5u/aTb8+meQWZvNFWkiGmbWjD6bqyuSSBxxXKkCftCUzc1zwCH2m/baCNDLGmuO5Q==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-config-standard/-/eslint-config-standard-17.1.0.tgz}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       eslint: ^8.0.1
@@ -1143,7 +1213,7 @@ packages:
     dev: true
 
   /eslint-import-resolver-node@0.3.9:
-    resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.9.tgz}
+    resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.9.tgz}
     dependencies:
       debug: 3.2.7
       is-core-module: 2.13.1
@@ -1153,7 +1223,7 @@ packages:
     dev: true
 
   /eslint-module-utils@2.8.0(@typescript-eslint/parser@6.14.0)(eslint-import-resolver-node@0.3.9)(eslint@8.55.0):
-    resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-module-utils/-/eslint-module-utils-2.8.0.tgz}
+    resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-module-utils/-/eslint-module-utils-2.8.0.tgz}
     engines: {node: '>=4'}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -1173,7 +1243,7 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 6.14.0(eslint@8.55.0)(typescript@5.3.3)
+      '@typescript-eslint/parser': 6.14.0(eslint@8.55.0)(typescript@4.9.5)
       debug: 3.2.7
       eslint: 8.55.0
       eslint-import-resolver-node: 0.3.9
@@ -1182,7 +1252,7 @@ packages:
     dev: true
 
   /eslint-plugin-es-x@7.5.0(eslint@8.55.0):
-    resolution: {integrity: sha512-ODswlDSO0HJDzXU0XvgZ3lF3lS3XAZEossh15Q2UHjwrJggWeBoKqqEsLTZLXl+dh5eOAozG0zRcYtuE35oTuQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-plugin-es-x/-/eslint-plugin-es-x-7.5.0.tgz}
+    resolution: {integrity: sha512-ODswlDSO0HJDzXU0XvgZ3lF3lS3XAZEossh15Q2UHjwrJggWeBoKqqEsLTZLXl+dh5eOAozG0zRcYtuE35oTuQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-plugin-es-x/-/eslint-plugin-es-x-7.5.0.tgz}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=8'
@@ -1194,7 +1264,7 @@ packages:
     dev: true
 
   /eslint-plugin-import@2.29.0(@typescript-eslint/parser@6.14.0)(eslint@8.55.0):
-    resolution: {integrity: sha512-QPOO5NO6Odv5lpoTkddtutccQjysJuFxoPS7fAHO+9m9udNHvTCPSAMW9zGAYj8lAIdr40I8yPCdUYrncXtrwg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-plugin-import/-/eslint-plugin-import-2.29.0.tgz}
+    resolution: {integrity: sha512-QPOO5NO6Odv5lpoTkddtutccQjysJuFxoPS7fAHO+9m9udNHvTCPSAMW9zGAYj8lAIdr40I8yPCdUYrncXtrwg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-plugin-import/-/eslint-plugin-import-2.29.0.tgz}
     engines: {node: '>=4'}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -1203,7 +1273,7 @@ packages:
       '@typescript-eslint/parser':
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 6.14.0(eslint@8.55.0)(typescript@5.3.3)
+      '@typescript-eslint/parser': 6.14.0(eslint@8.55.0)(typescript@4.9.5)
       array-includes: 3.1.7
       array.prototype.findlastindex: 1.2.3
       array.prototype.flat: 1.3.2
@@ -1229,7 +1299,7 @@ packages:
     dev: true
 
   /eslint-plugin-n@16.4.0(eslint@8.55.0):
-    resolution: {integrity: sha512-IkqJjGoWYGskVaJA7WQuN8PINIxc0N/Pk/jLeYT4ees6Fo5lAhpwGsYek6gS9tCUxgDC4zJ+OwY2bY/6/9OMKQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-plugin-n/-/eslint-plugin-n-16.4.0.tgz}
+    resolution: {integrity: sha512-IkqJjGoWYGskVaJA7WQuN8PINIxc0N/Pk/jLeYT4ees6Fo5lAhpwGsYek6gS9tCUxgDC4zJ+OwY2bY/6/9OMKQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-plugin-n/-/eslint-plugin-n-16.4.0.tgz}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: '>=7.0.0'
@@ -1248,7 +1318,7 @@ packages:
     dev: true
 
   /eslint-plugin-promise@6.1.1(eslint@8.55.0):
-    resolution: {integrity: sha512-tjqWDwVZQo7UIPMeDReOpUgHCmCiH+ePnVT+5zVapL0uuHnegBUs2smM13CzOs2Xb5+MHMRFTs9v24yjba4Oig==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-plugin-promise/-/eslint-plugin-promise-6.1.1.tgz}
+    resolution: {integrity: sha512-tjqWDwVZQo7UIPMeDReOpUgHCmCiH+ePnVT+5zVapL0uuHnegBUs2smM13CzOs2Xb5+MHMRFTs9v24yjba4Oig==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/eslint-plugin-promise/-/eslint-plugin-promise-6.1.1.tgz}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0
@@ -1483,7 +1553,7 @@ packages:
     dev: true
 
   /for-each@0.3.3:
-    resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/for-each/-/for-each-0.3.3.tgz}
+    resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/for-each/-/for-each-0.3.3.tgz}
     dependencies:
       is-callable: 1.2.7
     dev: true
@@ -1493,18 +1563,19 @@ packages:
     dev: true
 
   /fsevents@2.3.3:
-    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/fsevents/-/fsevents-2.3.3.tgz}
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
     requiresBuild: true
     dev: true
     optional: true
 
   /function-bind@1.1.2:
-    resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/function-bind/-/function-bind-1.1.2.tgz}
+    resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/function-bind/-/function-bind-1.1.2.tgz}
     dev: true
 
   /function.prototype.name@1.1.6:
-    resolution: {integrity: sha512-Z5kx79swU5P27WEayXM1tBi5Ze/lbIyiNgU3qyXUOf9b2rgXYyF9Dy9Cx+IQv/Lc8WCG6L82zwUPpSS9hGehIg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/function.prototype.name/-/function.prototype.name-1.1.6.tgz}
+    resolution: {integrity: sha512-Z5kx79swU5P27WEayXM1tBi5Ze/lbIyiNgU3qyXUOf9b2rgXYyF9Dy9Cx+IQv/Lc8WCG6L82zwUPpSS9hGehIg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/function.prototype.name/-/function.prototype.name-1.1.6.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -1514,7 +1585,7 @@ packages:
     dev: true
 
   /functions-have-names@1.2.3:
-    resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/functions-have-names/-/functions-have-names-1.2.3.tgz}
+    resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/functions-have-names/-/functions-have-names-1.2.3.tgz}
     dev: true
 
   /get-func-name@2.0.2:
@@ -1522,7 +1593,7 @@ packages:
     dev: true
 
   /get-intrinsic@1.2.2:
-    resolution: {integrity: sha512-0gSo4ml/0j98Y3lngkFEot/zhiCeWsbYIlZ+uZOVgzLyLaUw7wxUL+nCTP0XJvJg1AXulJRI3UJi8GsbDuxdGA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/get-intrinsic/-/get-intrinsic-1.2.2.tgz}
+    resolution: {integrity: sha512-0gSo4ml/0j98Y3lngkFEot/zhiCeWsbYIlZ+uZOVgzLyLaUw7wxUL+nCTP0XJvJg1AXulJRI3UJi8GsbDuxdGA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/get-intrinsic/-/get-intrinsic-1.2.2.tgz}
     dependencies:
       function-bind: 1.1.2
       has-proto: 1.0.1
@@ -1541,7 +1612,7 @@ packages:
     dev: true
 
   /get-symbol-description@1.0.0:
-    resolution: {integrity: sha512-2EmdH1YvIQiZpltCNgkuiUnyukzxM/R6NDJX31Ke3BG1Nq5b0S2PhX59UKi9vZpPDQVdqn+1IcaAwnzTT5vCjw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/get-symbol-description/-/get-symbol-description-1.0.0.tgz}
+    resolution: {integrity: sha512-2EmdH1YvIQiZpltCNgkuiUnyukzxM/R6NDJX31Ke3BG1Nq5b0S2PhX59UKi9vZpPDQVdqn+1IcaAwnzTT5vCjw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/get-symbol-description/-/get-symbol-description-1.0.0.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -1549,7 +1620,7 @@ packages:
     dev: true
 
   /get-tsconfig@4.7.2:
-    resolution: {integrity: sha512-wuMsz4leaj5hbGgg4IvDU0bqJagpftG5l5cXIAvo8uZrqn0NJqwtfupTN00VnkQJPcIRrxYrm1Ue24btpCha2A==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/get-tsconfig/-/get-tsconfig-4.7.2.tgz}
+    resolution: {integrity: sha512-wuMsz4leaj5hbGgg4IvDU0bqJagpftG5l5cXIAvo8uZrqn0NJqwtfupTN00VnkQJPcIRrxYrm1Ue24btpCha2A==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/get-tsconfig/-/get-tsconfig-4.7.2.tgz}
     dependencies:
       resolve-pkg-maps: 1.0.0
     dev: true
@@ -1587,7 +1658,7 @@ packages:
     dev: true
 
   /globalthis@1.0.3:
-    resolution: {integrity: sha512-sFdI5LyBiNTHjRd7cGPWapiHWMOXKyuBNX/cWJ3NfzrZQVa8GI/8cofCl74AOVqq9W5kNmguTIzJ/1s2gyI9wA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/globalthis/-/globalthis-1.0.3.tgz}
+    resolution: {integrity: sha512-sFdI5LyBiNTHjRd7cGPWapiHWMOXKyuBNX/cWJ3NfzrZQVa8GI/8cofCl74AOVqq9W5kNmguTIzJ/1s2gyI9wA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/globalthis/-/globalthis-1.0.3.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       define-properties: 1.2.1
@@ -1606,7 +1677,7 @@ packages:
     dev: true
 
   /gopd@1.0.1:
-    resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/gopd/-/gopd-1.0.1.tgz}
+    resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/gopd/-/gopd-1.0.1.tgz}
     dependencies:
       get-intrinsic: 1.2.2
     dev: true
@@ -1616,7 +1687,7 @@ packages:
     dev: true
 
   /has-bigints@1.0.2:
-    resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/has-bigints/-/has-bigints-1.0.2.tgz}
+    resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/has-bigints/-/has-bigints-1.0.2.tgz}
     dev: true
 
   /has-flag@4.0.0:
@@ -1625,30 +1696,30 @@ packages:
     dev: true
 
   /has-property-descriptors@1.0.1:
-    resolution: {integrity: sha512-VsX8eaIewvas0xnvinAe9bw4WfIeODpGYikiWYLH+dma0Jw6KHYqWiWfhQlgOVK8D6PvjubK5Uc4P0iIhIcNVg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/has-property-descriptors/-/has-property-descriptors-1.0.1.tgz}
+    resolution: {integrity: sha512-VsX8eaIewvas0xnvinAe9bw4WfIeODpGYikiWYLH+dma0Jw6KHYqWiWfhQlgOVK8D6PvjubK5Uc4P0iIhIcNVg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/has-property-descriptors/-/has-property-descriptors-1.0.1.tgz}
     dependencies:
       get-intrinsic: 1.2.2
     dev: true
 
   /has-proto@1.0.1:
-    resolution: {integrity: sha512-7qE+iP+O+bgF9clE5+UoBFzE65mlBiVj3tKCrlNQ0Ogwm0BjpT/gK4SlLYDMybDh5I3TCTKnPPa0oMG7JDYrhg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/has-proto/-/has-proto-1.0.1.tgz}
+    resolution: {integrity: sha512-7qE+iP+O+bgF9clE5+UoBFzE65mlBiVj3tKCrlNQ0Ogwm0BjpT/gK4SlLYDMybDh5I3TCTKnPPa0oMG7JDYrhg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/has-proto/-/has-proto-1.0.1.tgz}
     engines: {node: '>= 0.4'}
     dev: true
 
   /has-symbols@1.0.3:
-    resolution: {integrity: sha512-l3LCuF6MgDNwTDKkdYGEihYjt5pRPbEg46rtlmnSPlUbgmB8LOIrKJbYYFBSbnPaJexMKtiPO8hmeRjRz2Td+A==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/has-symbols/-/has-symbols-1.0.3.tgz}
+    resolution: {integrity: sha512-l3LCuF6MgDNwTDKkdYGEihYjt5pRPbEg46rtlmnSPlUbgmB8LOIrKJbYYFBSbnPaJexMKtiPO8hmeRjRz2Td+A==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/has-symbols/-/has-symbols-1.0.3.tgz}
     engines: {node: '>= 0.4'}
     dev: true
 
   /has-tostringtag@1.0.0:
-    resolution: {integrity: sha512-kFjcSNhnlGV1kyoGk7OXKSawH5JOb/LzUc5w9B02hOTO0dfFRjbHQKvg1d6cf3HbeUmtU9VbbV3qzZ2Teh97WQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/has-tostringtag/-/has-tostringtag-1.0.0.tgz}
+    resolution: {integrity: sha512-kFjcSNhnlGV1kyoGk7OXKSawH5JOb/LzUc5w9B02hOTO0dfFRjbHQKvg1d6cf3HbeUmtU9VbbV3qzZ2Teh97WQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/has-tostringtag/-/has-tostringtag-1.0.0.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       has-symbols: 1.0.3
     dev: true
 
   /hasown@2.0.0:
-    resolution: {integrity: sha512-vUptKVTpIJhcczKBbgnS+RtcuYMB8+oNzPK2/Hp3hanz8JmpATdmmgLgSaadVREkDm+e2giHwY3ZRkyjSIDDFA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/hasown/-/hasown-2.0.0.tgz}
+    resolution: {integrity: sha512-vUptKVTpIJhcczKBbgnS+RtcuYMB8+oNzPK2/Hp3hanz8JmpATdmmgLgSaadVREkDm+e2giHwY3ZRkyjSIDDFA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/hasown/-/hasown-2.0.0.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       function-bind: 1.1.2
@@ -1704,7 +1775,7 @@ packages:
     dev: true
 
   /internal-slot@1.0.6:
-    resolution: {integrity: sha512-Xj6dv+PsbtwyPpEflsejS+oIZxmMlV44zAhG479uYu89MsjcYOhCFnNyKrkJrihbsiasQyY0afoCl/9BLR65bg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/internal-slot/-/internal-slot-1.0.6.tgz}
+    resolution: {integrity: sha512-Xj6dv+PsbtwyPpEflsejS+oIZxmMlV44zAhG479uYu89MsjcYOhCFnNyKrkJrihbsiasQyY0afoCl/9BLR65bg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/internal-slot/-/internal-slot-1.0.6.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       get-intrinsic: 1.2.2
@@ -1717,7 +1788,7 @@ packages:
     dev: true
 
   /is-array-buffer@3.0.2:
-    resolution: {integrity: sha512-y+FyyR/w8vfIRq4eQcM1EYgSTnmHXPqaF+IgzgraytCFq5Xh8lllDVmAZolPJiZttZLeFSINPYMaEJ7/vWUa1w==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-array-buffer/-/is-array-buffer-3.0.2.tgz}
+    resolution: {integrity: sha512-y+FyyR/w8vfIRq4eQcM1EYgSTnmHXPqaF+IgzgraytCFq5Xh8lllDVmAZolPJiZttZLeFSINPYMaEJ7/vWUa1w==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-array-buffer/-/is-array-buffer-3.0.2.tgz}
     dependencies:
       call-bind: 1.0.5
       get-intrinsic: 1.2.2
@@ -1725,7 +1796,7 @@ packages:
     dev: true
 
   /is-bigint@1.0.4:
-    resolution: {integrity: sha512-zB9CruMamjym81i2JZ3UMn54PKGsQzsJeo6xvN3HJJ4CAsQNB6iRutp2To77OfCNuoxspsIhzaPoO1zyCEhFOg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-bigint/-/is-bigint-1.0.4.tgz}
+    resolution: {integrity: sha512-zB9CruMamjym81i2JZ3UMn54PKGsQzsJeo6xvN3HJJ4CAsQNB6iRutp2To77OfCNuoxspsIhzaPoO1zyCEhFOg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-bigint/-/is-bigint-1.0.4.tgz}
     dependencies:
       has-bigints: 1.0.2
     dev: true
@@ -1738,7 +1809,7 @@ packages:
     dev: true
 
   /is-boolean-object@1.1.2:
-    resolution: {integrity: sha512-gDYaKHJmnj4aWxyj6YHyXVpdQawtVLHU5cb+eztPGczf6cjuTdwve5ZIEfgXqH4e57An1D1AKf8CZ3kYrQRqYA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-boolean-object/-/is-boolean-object-1.1.2.tgz}
+    resolution: {integrity: sha512-gDYaKHJmnj4aWxyj6YHyXVpdQawtVLHU5cb+eztPGczf6cjuTdwve5ZIEfgXqH4e57An1D1AKf8CZ3kYrQRqYA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-boolean-object/-/is-boolean-object-1.1.2.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -1746,25 +1817,25 @@ packages:
     dev: true
 
   /is-builtin-module@3.2.1:
-    resolution: {integrity: sha512-BSLE3HnV2syZ0FK0iMA/yUGplUeMmNz4AW5fnTunbCIqZi4vG3WjJT9FHMy5D69xmAYBHXQhJdALdpwVxV501A==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-builtin-module/-/is-builtin-module-3.2.1.tgz}
+    resolution: {integrity: sha512-BSLE3HnV2syZ0FK0iMA/yUGplUeMmNz4AW5fnTunbCIqZi4vG3WjJT9FHMy5D69xmAYBHXQhJdALdpwVxV501A==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-builtin-module/-/is-builtin-module-3.2.1.tgz}
     engines: {node: '>=6'}
     dependencies:
       builtin-modules: 3.3.0
     dev: true
 
   /is-callable@1.2.7:
-    resolution: {integrity: sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-callable/-/is-callable-1.2.7.tgz}
+    resolution: {integrity: sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-callable/-/is-callable-1.2.7.tgz}
     engines: {node: '>= 0.4'}
     dev: true
 
   /is-core-module@2.13.1:
-    resolution: {integrity: sha512-hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-core-module/-/is-core-module-2.13.1.tgz}
+    resolution: {integrity: sha512-hHrIjvZsftOsvKSn2TRYl63zvxsgE0K+0mYMoH6gD4omR5IWB2KynivBQczo3+wF1cCkjzvptnI9Q0sPU66ilw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-core-module/-/is-core-module-2.13.1.tgz}
     dependencies:
       hasown: 2.0.0
     dev: true
 
   /is-date-object@1.0.5:
-    resolution: {integrity: sha512-9YQaSxsAiSwcvS33MBk3wTCVnWK+HhF8VZR2jRxehM16QcVOdHqPn4VPHmRK4lSr38n9JriurInLcP90xsYNfQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-date-object/-/is-date-object-1.0.5.tgz}
+    resolution: {integrity: sha512-9YQaSxsAiSwcvS33MBk3wTCVnWK+HhF8VZR2jRxehM16QcVOdHqPn4VPHmRK4lSr38n9JriurInLcP90xsYNfQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-date-object/-/is-date-object-1.0.5.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       has-tostringtag: 1.0.0
@@ -1783,12 +1854,12 @@ packages:
     dev: true
 
   /is-negative-zero@2.0.2:
-    resolution: {integrity: sha512-dqJvarLawXsFbNDeJW7zAz8ItJ9cd28YufuuFzh0G8pNHjJMnY08Dv7sYX2uF5UpQOwieAeOExEYAWWfu7ZZUA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-negative-zero/-/is-negative-zero-2.0.2.tgz}
+    resolution: {integrity: sha512-dqJvarLawXsFbNDeJW7zAz8ItJ9cd28YufuuFzh0G8pNHjJMnY08Dv7sYX2uF5UpQOwieAeOExEYAWWfu7ZZUA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-negative-zero/-/is-negative-zero-2.0.2.tgz}
     engines: {node: '>= 0.4'}
     dev: true
 
   /is-number-object@1.0.7:
-    resolution: {integrity: sha512-k1U0IRzLMo7ZlYIfzRu23Oh6MiIFasgpb9X76eqfFZAqwH44UI4KTBvBYIZ1dSL9ZzChTB9ShHfLkR4pdW5krQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-number-object/-/is-number-object-1.0.7.tgz}
+    resolution: {integrity: sha512-k1U0IRzLMo7ZlYIfzRu23Oh6MiIFasgpb9X76eqfFZAqwH44UI4KTBvBYIZ1dSL9ZzChTB9ShHfLkR4pdW5krQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-number-object/-/is-number-object-1.0.7.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       has-tostringtag: 1.0.0
@@ -1805,7 +1876,7 @@ packages:
     dev: true
 
   /is-regex@1.1.4:
-    resolution: {integrity: sha512-kvRdxDsxZjhzUX07ZnLydzS1TU/TJlTUHHY4YLL87e37oUA49DfkLqgy+VjFocowy29cKvcSiu+kIv728jTTVg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-regex/-/is-regex-1.1.4.tgz}
+    resolution: {integrity: sha512-kvRdxDsxZjhzUX07ZnLydzS1TU/TJlTUHHY4YLL87e37oUA49DfkLqgy+VjFocowy29cKvcSiu+kIv728jTTVg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-regex/-/is-regex-1.1.4.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -1813,7 +1884,7 @@ packages:
     dev: true
 
   /is-shared-array-buffer@1.0.2:
-    resolution: {integrity: sha512-sqN2UDu1/0y6uvXyStCOzyhAjCSlHceFoMKJW8W9EU9cvic/QdsZ0kEU93HEy3IUEFZIiH/3w+AH/UQbPHNdhA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-shared-array-buffer/-/is-shared-array-buffer-1.0.2.tgz}
+    resolution: {integrity: sha512-sqN2UDu1/0y6uvXyStCOzyhAjCSlHceFoMKJW8W9EU9cvic/QdsZ0kEU93HEy3IUEFZIiH/3w+AH/UQbPHNdhA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-shared-array-buffer/-/is-shared-array-buffer-1.0.2.tgz}
     dependencies:
       call-bind: 1.0.5
     dev: true
@@ -1829,34 +1900,34 @@ packages:
     dev: true
 
   /is-string@1.0.7:
-    resolution: {integrity: sha512-tE2UXzivje6ofPW7l23cjDOMa09gb7xlAqG6jG5ej6uPV32TlWP3NKPigtaGeHNu9fohccRYvIiZMfOOnOYUtg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-string/-/is-string-1.0.7.tgz}
+    resolution: {integrity: sha512-tE2UXzivje6ofPW7l23cjDOMa09gb7xlAqG6jG5ej6uPV32TlWP3NKPigtaGeHNu9fohccRYvIiZMfOOnOYUtg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-string/-/is-string-1.0.7.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       has-tostringtag: 1.0.0
     dev: true
 
   /is-symbol@1.0.4:
-    resolution: {integrity: sha512-C/CPBqKWnvdcxqIARxyOh4v1UUEOCHpgDa0WYgpKDFMszcrPcffg5uhwSgPCLD2WWxmq6isisz87tzT01tuGhg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-symbol/-/is-symbol-1.0.4.tgz}
+    resolution: {integrity: sha512-C/CPBqKWnvdcxqIARxyOh4v1UUEOCHpgDa0WYgpKDFMszcrPcffg5uhwSgPCLD2WWxmq6isisz87tzT01tuGhg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-symbol/-/is-symbol-1.0.4.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       has-symbols: 1.0.3
     dev: true
 
   /is-typed-array@1.1.12:
-    resolution: {integrity: sha512-Z14TF2JNG8Lss5/HMqt0//T9JeHXttXy5pH/DBU4vi98ozO2btxzq9MwYDZYnKwU8nRsz/+GVFVRDq3DkVuSPg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-typed-array/-/is-typed-array-1.1.12.tgz}
+    resolution: {integrity: sha512-Z14TF2JNG8Lss5/HMqt0//T9JeHXttXy5pH/DBU4vi98ozO2btxzq9MwYDZYnKwU8nRsz/+GVFVRDq3DkVuSPg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-typed-array/-/is-typed-array-1.1.12.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       which-typed-array: 1.1.13
     dev: true
 
   /is-weakref@1.0.2:
-    resolution: {integrity: sha512-qctsuLZmIQ0+vSSMfoVvyFe2+GSEvnmZ2ezTup1SBse9+twCCeial6EEi3Nc2KFcf6+qz2FBPnjXsk8xhKSaPQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-weakref/-/is-weakref-1.0.2.tgz}
+    resolution: {integrity: sha512-qctsuLZmIQ0+vSSMfoVvyFe2+GSEvnmZ2ezTup1SBse9+twCCeial6EEi3Nc2KFcf6+qz2FBPnjXsk8xhKSaPQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/is-weakref/-/is-weakref-1.0.2.tgz}
     dependencies:
       call-bind: 1.0.5
     dev: true
 
   /isarray@2.0.5:
-    resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/isarray/-/isarray-2.0.5.tgz}
+    resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/isarray/-/isarray-2.0.5.tgz}
     dev: true
 
   /isexe@2.0.0:
@@ -1888,7 +1959,7 @@ packages:
     dev: true
 
   /json5@1.0.2:
-    resolution: {integrity: sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/json5/-/json5-1.0.2.tgz}
+    resolution: {integrity: sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/json5/-/json5-1.0.2.tgz}
     hasBin: true
     dependencies:
       minimist: 1.2.8
@@ -1901,7 +1972,7 @@ packages:
   /kareem@2.5.1:
     resolution: {integrity: sha512-7jFxRVm+jD+rkq3kY0iZDJfsO2/t4BBPeEb2qKn2lR/9KhuksYk5hxzfRYWMPV8P/x2d0kHD306YyWLzjjH+uA==}
     engines: {node: '>=12.0.0'}
-    dev: false
+    dev: true
 
   /keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
@@ -1990,6 +2061,9 @@ packages:
 
   /memory-pager@1.5.0:
     resolution: {integrity: sha512-ZS4Bp4r/Zoeq6+NLJpP+0Zzm0pR8whtGPf1XExKLJBAczGMnSi3It14OiNCStjQjM6NU1okjQGSxgEZN8eBYKg==}
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -2025,7 +2099,7 @@ packages:
     dev: true
 
   /minimist@1.2.8:
-    resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/minimist/-/minimist-1.2.8.tgz}
+    resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/minimist/-/minimist-1.2.8.tgz}
     dev: true
 
   /mlly@1.4.2:
@@ -2042,6 +2116,7 @@ packages:
     dependencies:
       '@types/whatwg-url': 8.2.2
       whatwg-url: 11.0.0
+    dev: true
 
   /mongodb-memory-server-core@9.1.1:
     resolution: {integrity: sha512-5toYR4A7DfV5k+Qf6L9FG86baID2rPP/JYwp8TPrdm8ZzfTfyHTwQwa2BzVpSwmLoVW5gXN0znYmXiE68mImMg==}
@@ -2084,6 +2159,34 @@ packages:
       - supports-color
     dev: true
 
+  /mongodb@5.9.1:
+    resolution: {integrity: sha512-NBGA8AfJxGPeB12F73xXwozt8ZpeIPmCUeWRwl9xejozTXFes/3zaep9zhzs1B/nKKsw4P3I4iPfXl3K7s6g+Q==}
+    engines: {node: '>=14.20.1'}
+    peerDependencies:
+      '@aws-sdk/credential-providers': ^3.188.0
+      '@mongodb-js/zstd': ^1.0.0
+      kerberos: ^1.0.0 || ^2.0.0
+      mongodb-client-encryption: '>=2.3.0 <3'
+      snappy: ^7.2.2
+    peerDependenciesMeta:
+      '@aws-sdk/credential-providers':
+        optional: true
+      '@mongodb-js/zstd':
+        optional: true
+      kerberos:
+        optional: true
+      mongodb-client-encryption:
+        optional: true
+      snappy:
+        optional: true
+    dependencies:
+      bson: 5.5.1
+      mongodb-connection-string-url: 2.6.0
+      socks: 2.7.1
+    optionalDependencies:
+      '@mongodb-js/saslprep': 1.1.1
+    dev: true
+
   /mongodb@5.9.2:
     resolution: {integrity: sha512-H60HecKO4Bc+7dhOv4sJlgvenK4fQNqqUIlXxZYQNbfEWSALGAwGoyJd/0Qwk4TttFXUOHJ2ZJQe/52ScaUwtQ==}
     engines: {node: '>=14.20.1'}
@@ -2112,45 +2215,13 @@ packages:
       '@mongodb-js/saslprep': 1.1.1
     dev: true
 
-  /mongodb@6.2.0:
-    resolution: {integrity: sha512-d7OSuGjGWDZ5usZPqfvb36laQ9CPhnWkAGHT61x5P95p/8nMVeH8asloMwW6GcYFeB0Vj4CB/1wOTDG2RA9BFA==}
-    engines: {node: '>=16.20.1'}
-    peerDependencies:
-      '@aws-sdk/credential-providers': ^3.188.0
-      '@mongodb-js/zstd': ^1.1.0
-      gcp-metadata: ^5.2.0
-      kerberos: ^2.0.1
-      mongodb-client-encryption: '>=6.0.0 <7'
-      snappy: ^7.2.2
-      socks: ^2.7.1
-    peerDependenciesMeta:
-      '@aws-sdk/credential-providers':
-        optional: true
-      '@mongodb-js/zstd':
-        optional: true
-      gcp-metadata:
-        optional: true
-      kerberos:
-        optional: true
-      mongodb-client-encryption:
-        optional: true
-      snappy:
-        optional: true
-      socks:
-        optional: true
+  /mongoose@7.6.7:
+    resolution: {integrity: sha512-6Ihl7Y7OlSEMiwyjar3N8sMKRZa3LNGcayES8I+Hluo0sV6j1SVOo8MXXnwi+z3+Hcyk4zO47+xL87fBTNlWVw==}
+    engines: {node: '>=14.20.1'}
     dependencies:
-      '@mongodb-js/saslprep': 1.1.1
-      bson: 6.2.0
-      mongodb-connection-string-url: 2.6.0
-    dev: false
-
-  /mongoose@8.0.3:
-    resolution: {integrity: sha512-LJRT0yP4TW14HT4r2RkxqyvoTylMSzWpl5QOeVHTnRggCLQSpkoBdgbUtORFq/mSL2o9cLCPJz+6uzFj25qbHw==}
-    engines: {node: '>=16.20.1'}
-    dependencies:
-      bson: 6.2.0
+      bson: 5.5.1
       kareem: 2.5.1
-      mongodb: 6.2.0
+      mongodb: 5.9.1
       mpath: 0.9.0
       mquery: 5.0.0
       ms: 2.1.3
@@ -2158,18 +2229,16 @@ packages:
     transitivePeerDependencies:
       - '@aws-sdk/credential-providers'
       - '@mongodb-js/zstd'
-      - gcp-metadata
       - kerberos
       - mongodb-client-encryption
       - snappy
-      - socks
       - supports-color
-    dev: false
+    dev: true
 
   /mpath@0.9.0:
     resolution: {integrity: sha512-ikJRQTk8hw5DEoFVxHG1Gn9T/xcjtdnOKIU1JTmGjZZlg9LST2mBLmcX3/ICIbgJydT2GOc15RnNy5mHmzfSew==}
     engines: {node: '>=4.0.0'}
-    dev: false
+    dev: true
 
   /mquery@5.0.0:
     resolution: {integrity: sha512-iQMncpmEK8R8ncT8HJGsGc9Dsp8xcgYMVSbs5jgnm1lFHTZqMJTUWTDx1LBO8+mK3tPNZWFLBghQEIOULSTHZg==}
@@ -2178,13 +2247,15 @@ packages:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
-    dev: false
+    dev: true
 
   /ms@2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
+    dev: true
 
   /ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+    dev: true
 
   /mz@2.7.0:
     resolution: {integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==}
@@ -2238,16 +2309,16 @@ packages:
     dev: true
 
   /object-inspect@1.13.1:
-    resolution: {integrity: sha512-5qoj1RUiKOMsCCNLV1CBiPYE10sziTsnmNxkAI/rZhiD63CF7IqdFGC/XzjWjpSgLf0LxXX3bDFIh0E18f6UhQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object-inspect/-/object-inspect-1.13.1.tgz}
+    resolution: {integrity: sha512-5qoj1RUiKOMsCCNLV1CBiPYE10sziTsnmNxkAI/rZhiD63CF7IqdFGC/XzjWjpSgLf0LxXX3bDFIh0E18f6UhQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object-inspect/-/object-inspect-1.13.1.tgz}
     dev: true
 
   /object-keys@1.1.1:
-    resolution: {integrity: sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object-keys/-/object-keys-1.1.1.tgz}
+    resolution: {integrity: sha512-NuAESUOUMrlIXOfHKzD6bpPu3tYt3xvjNdRIQ+FeT0lNb4K8WR70CaDxhuNguS2XG+GjkyMwOzsN5ZktImfhLA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object-keys/-/object-keys-1.1.1.tgz}
     engines: {node: '>= 0.4'}
     dev: true
 
   /object.assign@4.1.5:
-    resolution: {integrity: sha512-byy+U7gp+FVwmyzKPYhW2h5l3crpmGsxl7X2s8y43IgxvG4g3QZ6CffDtsNQy1WsmZpQbO+ybo0AlW7TY6DcBQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object.assign/-/object.assign-4.1.5.tgz}
+    resolution: {integrity: sha512-byy+U7gp+FVwmyzKPYhW2h5l3crpmGsxl7X2s8y43IgxvG4g3QZ6CffDtsNQy1WsmZpQbO+ybo0AlW7TY6DcBQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object.assign/-/object.assign-4.1.5.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -2257,7 +2328,7 @@ packages:
     dev: true
 
   /object.fromentries@2.0.7:
-    resolution: {integrity: sha512-UPbPHML6sL8PI/mOqPwsH4G6iyXcCGzLin8KvEPenOZN5lpCNBZZQ+V62vdjB1mQHrmqGQt5/OJzemUA+KJmEA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object.fromentries/-/object.fromentries-2.0.7.tgz}
+    resolution: {integrity: sha512-UPbPHML6sL8PI/mOqPwsH4G6iyXcCGzLin8KvEPenOZN5lpCNBZZQ+V62vdjB1mQHrmqGQt5/OJzemUA+KJmEA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object.fromentries/-/object.fromentries-2.0.7.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -2266,7 +2337,7 @@ packages:
     dev: true
 
   /object.groupby@1.0.1:
-    resolution: {integrity: sha512-HqaQtqLnp/8Bn4GL16cj+CUYbnpe1bh0TtEaWvybszDG4tgxCJuRpV8VGuvNaI1fAnI4lUJzDG55MXcOH4JZcQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object.groupby/-/object.groupby-1.0.1.tgz}
+    resolution: {integrity: sha512-HqaQtqLnp/8Bn4GL16cj+CUYbnpe1bh0TtEaWvybszDG4tgxCJuRpV8VGuvNaI1fAnI4lUJzDG55MXcOH4JZcQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object.groupby/-/object.groupby-1.0.1.tgz}
     dependencies:
       call-bind: 1.0.5
       define-properties: 1.2.1
@@ -2275,7 +2346,7 @@ packages:
     dev: true
 
   /object.values@1.1.7:
-    resolution: {integrity: sha512-aU6xnDFYT3x17e/f0IiiwlGPTy2jzMySGfUB4fq6z7CV8l85CWHDk5ErhyhpfDHhrOMwGFhSQkhMGHaIotA6Ng==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object.values/-/object.values-1.1.7.tgz}
+    resolution: {integrity: sha512-aU6xnDFYT3x17e/f0IiiwlGPTy2jzMySGfUB4fq6z7CV8l85CWHDk5ErhyhpfDHhrOMwGFhSQkhMGHaIotA6Ng==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/object.values/-/object.values-1.1.7.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -2383,7 +2454,7 @@ packages:
     dev: true
 
   /path-parse@1.0.7:
-    resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/path-parse/-/path-parse-1.0.7.tgz}
+    resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/path-parse/-/path-parse-1.0.7.tgz}
     dev: true
 
   /path-type@4.0.0:
@@ -2474,6 +2545,7 @@ packages:
   /punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
+    dev: true
 
   /queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
@@ -2495,7 +2567,7 @@ packages:
     dev: true
 
   /regexp.prototype.flags@1.5.1:
-    resolution: {integrity: sha512-sy6TXMN+hnP/wMy+ISxg3krXx7BAtWVO4UouuCN/ziM9UEne0euamVNafDfvC83bRNr95y0V5iijeDQFUNpvrg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/regexp.prototype.flags/-/regexp.prototype.flags-1.5.1.tgz}
+    resolution: {integrity: sha512-sy6TXMN+hnP/wMy+ISxg3krXx7BAtWVO4UouuCN/ziM9UEne0euamVNafDfvC83bRNr95y0V5iijeDQFUNpvrg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/regexp.prototype.flags/-/regexp.prototype.flags-1.5.1.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -2514,11 +2586,11 @@ packages:
     dev: true
 
   /resolve-pkg-maps@1.0.0:
-    resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz}
+    resolution: {integrity: sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/resolve-pkg-maps/-/resolve-pkg-maps-1.0.0.tgz}
     dev: true
 
   /resolve@1.22.8:
-    resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/resolve/-/resolve-1.22.8.tgz}
+    resolution: {integrity: sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/resolve/-/resolve-1.22.8.tgz}
     hasBin: true
     dependencies:
       is-core-module: 2.13.1
@@ -2566,7 +2638,7 @@ packages:
     dev: true
 
   /safe-array-concat@1.0.1:
-    resolution: {integrity: sha512-6XbUAseYE2KtOuGueyeobCySj9L4+66Tn6KQMOPQJrAJEowYKW/YR/MGJZl7FdydUdaFu4LYyDZjxf4/Nmo23Q==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/safe-array-concat/-/safe-array-concat-1.0.1.tgz}
+    resolution: {integrity: sha512-6XbUAseYE2KtOuGueyeobCySj9L4+66Tn6KQMOPQJrAJEowYKW/YR/MGJZl7FdydUdaFu4LYyDZjxf4/Nmo23Q==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/safe-array-concat/-/safe-array-concat-1.0.1.tgz}
     engines: {node: '>=0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -2576,7 +2648,7 @@ packages:
     dev: true
 
   /safe-regex-test@1.0.0:
-    resolution: {integrity: sha512-JBUUzyOgEwXQY1NuPtvcj/qcBDbDmEvWufhlnXZIm75DEHp+afM1r1ujJpJsV/gSM4t59tpDyPi1sd6ZaPFfsA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/safe-regex-test/-/safe-regex-test-1.0.0.tgz}
+    resolution: {integrity: sha512-JBUUzyOgEwXQY1NuPtvcj/qcBDbDmEvWufhlnXZIm75DEHp+afM1r1ujJpJsV/gSM4t59tpDyPi1sd6ZaPFfsA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/safe-regex-test/-/safe-regex-test-1.0.0.tgz}
     dependencies:
       call-bind: 1.0.5
       get-intrinsic: 1.2.2
@@ -2597,7 +2669,7 @@ packages:
     dev: true
 
   /set-function-length@1.1.1:
-    resolution: {integrity: sha512-VoaqjbBJKiWtg4yRcKBQ7g7wnGnLV3M8oLvVWwOk2PdYY6PEFegR1vezXR0tw6fZGF9csVakIRjrJiy2veSBFQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/set-function-length/-/set-function-length-1.1.1.tgz}
+    resolution: {integrity: sha512-VoaqjbBJKiWtg4yRcKBQ7g7wnGnLV3M8oLvVWwOk2PdYY6PEFegR1vezXR0tw6fZGF9csVakIRjrJiy2veSBFQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/set-function-length/-/set-function-length-1.1.1.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       define-data-property: 1.1.1
@@ -2607,7 +2679,7 @@ packages:
     dev: true
 
   /set-function-name@2.0.1:
-    resolution: {integrity: sha512-tMNCiqYVkXIZgc2Hnoy2IvC/f8ezc5koaRFkCjrpWzGpCd3qbZXPzVy9MAZzK1ch/X0jvSkojys3oqJN0qCmdA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/set-function-name/-/set-function-name-2.0.1.tgz}
+    resolution: {integrity: sha512-tMNCiqYVkXIZgc2Hnoy2IvC/f8ezc5koaRFkCjrpWzGpCd3qbZXPzVy9MAZzK1ch/X0jvSkojys3oqJN0qCmdA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/set-function-name/-/set-function-name-2.0.1.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       define-data-property: 1.1.1
@@ -2628,7 +2700,7 @@ packages:
     dev: true
 
   /side-channel@1.0.4:
-    resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/side-channel/-/side-channel-1.0.4.tgz}
+    resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/side-channel/-/side-channel-1.0.4.tgz}
     dependencies:
       call-bind: 1.0.5
       get-intrinsic: 1.2.2
@@ -2637,7 +2709,7 @@ packages:
 
   /sift@16.0.1:
     resolution: {integrity: sha512-Wv6BjQ5zbhW7VFefWusVP33T/EM0vYikCaQ2qR8yULbsilAT8/wQaXvuQ3ptGLpoKx+lihJE3y2UTgKDyyNHZQ==}
-    dev: false
+    dev: true
 
   /siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
@@ -2684,8 +2756,11 @@ packages:
 
   /sparse-bitfield@3.0.3:
     resolution: {integrity: sha512-kvzhi7vqKTfkh0PZU+2D2PIllw2ymqJKujUcyPMd9Y75Nv4nPbGJZXNhxsgdQab2BmlDct1YnfQCguEvHr7VsQ==}
+    requiresBuild: true
     dependencies:
       memory-pager: 1.5.0
+    dev: true
+    optional: true
 
   /stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
@@ -2703,7 +2778,7 @@ packages:
     dev: true
 
   /string.prototype.trim@1.2.8:
-    resolution: {integrity: sha512-lfjY4HcixfQXOfaqCvcBuOIapyaroTXhbkfJN3gcB1OtyupngWK4sEET9Knd0cXd28kTUqu/kHoV4HKSJdnjiQ==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/string.prototype.trim/-/string.prototype.trim-1.2.8.tgz}
+    resolution: {integrity: sha512-lfjY4HcixfQXOfaqCvcBuOIapyaroTXhbkfJN3gcB1OtyupngWK4sEET9Knd0cXd28kTUqu/kHoV4HKSJdnjiQ==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/string.prototype.trim/-/string.prototype.trim-1.2.8.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -2712,7 +2787,7 @@ packages:
     dev: true
 
   /string.prototype.trimend@1.0.7:
-    resolution: {integrity: sha512-Ni79DqeB72ZFq1uH/L6zJ+DKZTkOtPIHovb3YZHQViE+HDouuU4mBrLOLDn5Dde3RF8qw5qVETEjhu9locMLvA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/string.prototype.trimend/-/string.prototype.trimend-1.0.7.tgz}
+    resolution: {integrity: sha512-Ni79DqeB72ZFq1uH/L6zJ+DKZTkOtPIHovb3YZHQViE+HDouuU4mBrLOLDn5Dde3RF8qw5qVETEjhu9locMLvA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/string.prototype.trimend/-/string.prototype.trimend-1.0.7.tgz}
     dependencies:
       call-bind: 1.0.5
       define-properties: 1.2.1
@@ -2720,7 +2795,7 @@ packages:
     dev: true
 
   /string.prototype.trimstart@1.0.7:
-    resolution: {integrity: sha512-NGhtDFu3jCEm7B4Fy0DpLewdJQOZcQ0rGbwQ/+stjnrp2i+rlKeCvos9hOIeCmqwratM47OBxY7uFZzjxHXmrg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/string.prototype.trimstart/-/string.prototype.trimstart-1.0.7.tgz}
+    resolution: {integrity: sha512-NGhtDFu3jCEm7B4Fy0DpLewdJQOZcQ0rGbwQ/+stjnrp2i+rlKeCvos9hOIeCmqwratM47OBxY7uFZzjxHXmrg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/string.prototype.trimstart/-/string.prototype.trimstart-1.0.7.tgz}
     dependencies:
       call-bind: 1.0.5
       define-properties: 1.2.1
@@ -2735,7 +2810,7 @@ packages:
     dev: true
 
   /strip-bom@3.0.0:
-    resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/strip-bom/-/strip-bom-3.0.0.tgz}
+    resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/strip-bom/-/strip-bom-3.0.0.tgz}
     engines: {node: '>=4'}
     dev: true
 
@@ -2782,7 +2857,7 @@ packages:
     dev: true
 
   /supports-preserve-symlinks-flag@1.0.0:
-    resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz}
+    resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz}
     engines: {node: '>= 0.4'}
     dev: true
 
@@ -2843,19 +2918,20 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       punycode: 2.3.1
+    dev: true
 
   /tree-kill@1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
     dev: true
 
-  /ts-api-utils@1.0.3(typescript@5.3.3):
-    resolution: {integrity: sha512-wNMeqtMz5NtwpT/UZGY5alT+VoKdSsOOP/kqHFcUW1P/VRhH2wJ48+DN2WwUliNbQ976ETwDL0Ifd2VVvgonvg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/ts-api-utils/-/ts-api-utils-1.0.3.tgz}
+  /ts-api-utils@1.0.3(typescript@4.9.5):
+    resolution: {integrity: sha512-wNMeqtMz5NtwpT/UZGY5alT+VoKdSsOOP/kqHFcUW1P/VRhH2wJ48+DN2WwUliNbQ976ETwDL0Ifd2VVvgonvg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/ts-api-utils/-/ts-api-utils-1.0.3.tgz}
     engines: {node: '>=16.13.0'}
     peerDependencies:
       typescript: '>=4.2.0'
     dependencies:
-      typescript: 5.3.3
+      typescript: 4.9.5
     dev: true
 
   /ts-interface-checker@0.1.13:
@@ -2863,7 +2939,7 @@ packages:
     dev: true
 
   /tsconfig-paths@3.14.2:
-    resolution: {integrity: sha512-o/9iXgCYc5L/JxCHPe3Hvh8Q/2xm5Z+p18PESBU6Ff33695QnCHBEjcytY2q19ua7Mbl/DavtBOLq+oG0RCL+g==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/tsconfig-paths/-/tsconfig-paths-3.14.2.tgz}
+    resolution: {integrity: sha512-o/9iXgCYc5L/JxCHPe3Hvh8Q/2xm5Z+p18PESBU6Ff33695QnCHBEjcytY2q19ua7Mbl/DavtBOLq+oG0RCL+g==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/tsconfig-paths/-/tsconfig-paths-3.14.2.tgz}
     dependencies:
       '@types/json5': 0.0.29
       json5: 1.0.2
@@ -2875,7 +2951,7 @@ packages:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
 
-  /tsup@8.0.1(typescript@5.3.3):
+  /tsup@8.0.1(typescript@4.9.5):
     resolution: {integrity: sha512-hvW7gUSG96j53ZTSlT4j/KL0q1Q2l6TqGBFc6/mu/L46IoNWqLLUzLRLP1R8Q7xrJTmkDxxDoojV5uCVs1sVOg==}
     engines: {node: '>=18'}
     hasBin: true
@@ -2908,7 +2984,7 @@ packages:
       source-map: 0.8.0-beta.0
       sucrase: 3.34.0
       tree-kill: 1.2.2
-      typescript: 5.3.3
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -2932,7 +3008,7 @@ packages:
     dev: true
 
   /typed-array-buffer@1.0.0:
-    resolution: {integrity: sha512-Y8KTSIglk9OZEr8zywiIHG/kmQ7KWyjseXs1CbSo8vC42w7hg2HgYTxSWwP0+is7bWDc1H+Fo026CpHFwm8tkw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/typed-array-buffer/-/typed-array-buffer-1.0.0.tgz}
+    resolution: {integrity: sha512-Y8KTSIglk9OZEr8zywiIHG/kmQ7KWyjseXs1CbSo8vC42w7hg2HgYTxSWwP0+is7bWDc1H+Fo026CpHFwm8tkw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/typed-array-buffer/-/typed-array-buffer-1.0.0.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -2941,7 +3017,7 @@ packages:
     dev: true
 
   /typed-array-byte-length@1.0.0:
-    resolution: {integrity: sha512-Or/+kvLxNpeQ9DtSydonMxCx+9ZXOswtwJn17SNLvhptaXYDJvkFFP5zbfU/uLmvnBJlI4yrnXRxpdWH/M5tNA==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/typed-array-byte-length/-/typed-array-byte-length-1.0.0.tgz}
+    resolution: {integrity: sha512-Or/+kvLxNpeQ9DtSydonMxCx+9ZXOswtwJn17SNLvhptaXYDJvkFFP5zbfU/uLmvnBJlI4yrnXRxpdWH/M5tNA==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/typed-array-byte-length/-/typed-array-byte-length-1.0.0.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
@@ -2951,7 +3027,7 @@ packages:
     dev: true
 
   /typed-array-byte-offset@1.0.0:
-    resolution: {integrity: sha512-RD97prjEt9EL8YgAgpOkf3O4IF9lhJFr9g0htQkm0rchFp/Vx7LW5Q8fSXXub7BXAODyUQohRMyOc3faCPd0hg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/typed-array-byte-offset/-/typed-array-byte-offset-1.0.0.tgz}
+    resolution: {integrity: sha512-RD97prjEt9EL8YgAgpOkf3O4IF9lhJFr9g0htQkm0rchFp/Vx7LW5Q8fSXXub7BXAODyUQohRMyOc3faCPd0hg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/typed-array-byte-offset/-/typed-array-byte-offset-1.0.0.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       available-typed-arrays: 1.0.5
@@ -2962,16 +3038,16 @@ packages:
     dev: true
 
   /typed-array-length@1.0.4:
-    resolution: {integrity: sha512-KjZypGq+I/H7HI5HlOoGHkWUUGq+Q0TPhQurLbyrVrvnKTBgzLhIJ7j6J/XTQOi0d1RjyZ0wdas8bKs2p0x3Ng==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/typed-array-length/-/typed-array-length-1.0.4.tgz}
+    resolution: {integrity: sha512-KjZypGq+I/H7HI5HlOoGHkWUUGq+Q0TPhQurLbyrVrvnKTBgzLhIJ7j6J/XTQOi0d1RjyZ0wdas8bKs2p0x3Ng==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/typed-array-length/-/typed-array-length-1.0.4.tgz}
     dependencies:
       call-bind: 1.0.5
       for-each: 0.3.3
       is-typed-array: 1.1.12
     dev: true
 
-  /typescript@5.3.3:
-    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
-    engines: {node: '>=14.17'}
+  /typescript@4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
+    engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
 
@@ -2980,7 +3056,7 @@ packages:
     dev: true
 
   /unbox-primitive@1.0.2:
-    resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/unbox-primitive/-/unbox-primitive-1.0.2.tgz}
+    resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/unbox-primitive/-/unbox-primitive-1.0.2.tgz}
     dependencies:
       call-bind: 1.0.5
       has-bigints: 1.0.2
@@ -2990,6 +3066,7 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
 
   /uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
@@ -3116,6 +3193,7 @@ packages:
   /webidl-conversions@7.0.0:
     resolution: {integrity: sha512-VwddBukDzu71offAQR975unBIGqfKZpM+8ZX6ySk8nYhVoo5CYaZyzt3YBvYtRtO+aoGlqxPg/B87NGVZ/fu6g==}
     engines: {node: '>=12'}
+    dev: true
 
   /whatwg-url@11.0.0:
     resolution: {integrity: sha512-RKT8HExMpoYx4igMiVMY83lN6UeITKJlBQ+vR/8ZJ8OCdSiN3RwCq+9gH0+Xzj0+5IrM6i4j/6LuvzbZIQgEcQ==}
@@ -3123,6 +3201,7 @@ packages:
     dependencies:
       tr46: 3.0.0
       webidl-conversions: 7.0.0
+    dev: true
 
   /whatwg-url@7.1.0:
     resolution: {integrity: sha512-WUu7Rg1DroM7oQvGWfOiAK21n74Gg+T4elXEQYkOhtyLeWiJFoOGLXPKI/9gzIie9CtwVLm8wtw6YJdKyxSjeg==}
@@ -3133,7 +3212,7 @@ packages:
     dev: true
 
   /which-boxed-primitive@1.0.2:
-    resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/which-boxed-primitive/-/which-boxed-primitive-1.0.2.tgz}
+    resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/which-boxed-primitive/-/which-boxed-primitive-1.0.2.tgz}
     dependencies:
       is-bigint: 1.0.4
       is-boolean-object: 1.1.2
@@ -3143,7 +3222,7 @@ packages:
     dev: true
 
   /which-typed-array@1.1.13:
-    resolution: {integrity: sha512-P5Nra0qjSncduVPEAr7xhoF5guty49ArDTwzJ/yNuPIbZppyRxFQsRCWrocxIY+CnMVG+qfbU2FmDKyvSGClow==, tarball: https://artifacts-west.pwc.com:443/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/which-typed-array/-/which-typed-array-1.1.13.tgz}
+    resolution: {integrity: sha512-P5Nra0qjSncduVPEAr7xhoF5guty49ArDTwzJ/yNuPIbZppyRxFQsRCWrocxIY+CnMVG+qfbU2FmDKyvSGClow==, tarball: https://artifacts-west.pwc.com/artifactory/api/npm/g00003-pwc-gx-quicksuite-npm/which-typed-array/-/which-typed-array-1.1.13.tgz}
     engines: {node: '>= 0.4'}
     dependencies:
       available-typed-arrays: 1.0.5

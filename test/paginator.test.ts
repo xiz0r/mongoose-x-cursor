@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import { MongoMemoryServer } from 'mongodb-memory-server'
 import UserModel from './model/user.model' // Asegúrate de importar tu modelo de usuario aquí
 import { generateRandomUser } from './user-mother'
+import { ImageModel } from './model/image.model'
 
 describe('Mongoose pagination test', () => {
   let mongoServer: MongoMemoryServer
@@ -20,6 +21,56 @@ describe('Mongoose pagination test', () => {
 
   beforeEach(async () => {
     await UserModel.deleteMany({})
+  })
+
+  it('should get empty page', async () => {
+    ImageModel.create({
+      style: 'style',
+      name: 'name',
+      fileExtension: 'fileExtension',
+      status: 'status',
+      user: {
+        userName: 'userName',
+        guid: 'guid',
+        email: 'email'
+      },
+      createdBy: {
+        userName: 'userName',
+        guid: 'guid',
+        email: 'email'
+      },
+      created: new Date(),
+      lastUpdated: new Date(),
+      reviewedBy: {
+        userName: 'userName',
+        guid: 'guid',
+        email: 'email'
+      },
+      reviewDate: new Date(),
+      width: 1,
+      height: 1,
+      aimodel: 'aimodel',
+      processedImages: [
+        {
+          name: 'name',
+          fileExtension: 'fileExtension',
+          lastUpdated: new Date(),
+          approvedBy: 'approvedBy',
+          backgroundId: 'backgroundId'
+        }
+      ],
+      processedModels: ['processedModels'],
+      retry: 1
+    })
+
+    const page = await ImageModel.paginate({
+      limit: 1,
+      totalDocs: true,
+      totalDocsCache: true
+    })
+
+    console.log(page)
+
   })
 
   it('should get first page', async () => {
@@ -43,7 +94,7 @@ describe('Mongoose pagination test', () => {
     expect(page.hasPrevious).toBe(false)
     expect(page.next).toBeDefined()
     expect(page.prev).toBeUndefined()
-    expect(page.data[0]._id.toString()).toBe(users[0]._id.toString())
+    expect(page.data[0]._id.toString()).toBe(users[0]._id?.toString())
   })
 
   it('should get second page', async () => {
@@ -57,7 +108,7 @@ describe('Mongoose pagination test', () => {
     const paginationModel = UserModel
 
     const page = await paginationModel.paginate({
-      next: users[1]._id.toString(),
+      next: users[1]._id?.toString(),
       limit: 1,
       totalDocs: true,
       totalDocsCache: true
@@ -69,7 +120,7 @@ describe('Mongoose pagination test', () => {
     expect(page.hasPrevious).toBe(true)
     expect(page.prev).toBeDefined()
     expect(page.next).toBeDefined()
-    expect(page.data[0]._id.toString()).toBe(users[1]._id.toString())
+    expect(page.data[0]._id.toString()).toBe(users[1]._id?.toString())
   })
 
   it('should get third page', async () => {
@@ -83,7 +134,7 @@ describe('Mongoose pagination test', () => {
     const paginationModel = UserModel
 
     const page2 = await paginationModel.paginate({
-      next: users[2]._id.toString(),
+      next: users[2]._id?.toString(),
       limit: 1,
       totalDocs: true,
       totalDocsCache: true
@@ -95,7 +146,7 @@ describe('Mongoose pagination test', () => {
     expect(page2.hasPrevious).toBe(true)
     expect(page2.prev).toBeDefined()
     expect(page2.next).toBeUndefined()
-    expect(page2.data[0]._id.toString()).toBe(users[2]._id.toString())
+    expect(page2.data[0]._id.toString()).toBe(users[2]._id?.toString())
   })
 
   it('should get previous page to second page (first page)', async () => {
@@ -109,7 +160,7 @@ describe('Mongoose pagination test', () => {
     const paginationModel = UserModel
 
     const page = await paginationModel.paginate({
-      prev: users[1]._id.toString(),
+      prev: users[1]._id?.toString(),
       limit: 1,
       totalDocs: true,
       totalDocsCache: true
@@ -121,7 +172,7 @@ describe('Mongoose pagination test', () => {
     expect(page.hasPrevious).toBe(false)
     expect(page.prev).toBeUndefined()
     expect(page.next).toBeDefined()
-    expect(page.data[0]._id.toString()).toBe(users[0]._id.toString())
+    expect(page.data[0]._id.toString()).toBe(users[0]._id?.toString())
   })
 
   it('should get previous page to third page (second page)', async () => {
@@ -135,7 +186,7 @@ describe('Mongoose pagination test', () => {
     const paginationModel = UserModel
 
     const page = await paginationModel.paginate({
-      prev: users[2]._id.toString(),
+      prev: users[2]._id?.toString(),
       limit: 1,
       totalDocs: true,
       totalDocsCache: true
@@ -147,7 +198,7 @@ describe('Mongoose pagination test', () => {
     expect(page.hasPrevious).toBe(true)
     expect(page.prev).toBeDefined()
     expect(page.next).toBeDefined()
-    expect(page.data[0]._id.toString()).toBe(users[1]._id.toString())
+    expect(page.data[0]._id.toString()).toBe(users[1]._id?.toString())
   })
 
   it('should get previous page to second page (first page) limit 2', async () => {
@@ -164,7 +215,7 @@ describe('Mongoose pagination test', () => {
     const paginationModel = UserModel
 
     const page = await paginationModel.paginate({
-      prev: users[2]._id.toString(),
+      prev: users[2]._id?.toString(),
       limit: 2,
       totalDocs: true,
       totalDocsCache: true
@@ -176,7 +227,7 @@ describe('Mongoose pagination test', () => {
     expect(page.hasPrevious).toBe(false)
     expect(page.prev).toBeUndefined()
     expect(page.next).toBeDefined()
-    expect(page.data[0]._id.toString()).toBe(users[0]._id.toString())
+    expect(page.data[0]._id.toString()).toBe(users[0]._id?.toString())
   })
 
   it('should get first page without totalDocs', async () => {
@@ -200,6 +251,6 @@ describe('Mongoose pagination test', () => {
     expect(page.hasPrevious).toBe(false)
     expect(page.next).toBeDefined()
     expect(page.prev).toBeUndefined()
-    expect(page.data[0]._id.toString()).toBe(users[0]._id.toString())
+    expect(page.data[0]._id.toString()).toBe(users[0]._id?.toString())
   })
 })

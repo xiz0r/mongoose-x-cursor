@@ -1,13 +1,14 @@
 {
   "name": "mongoose-x-cursor",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Opinionated mongoose plugin for cursor based pagination",
-  "type": "module",
   "scripts": {
-    "build": "tsup ./src --external mongoose",
+    "build": "tsup ./src --external mongoose --format cjs",
     "test": "vitest --config ./vitest.config.mts",
     "lint": "eslint --ext .ts ./src ./test"
   },
+  "main": "dist/index.js", 
+  "types": "dist/index.d.ts", 
   "keywords": [
     "mongoose",
     "cursor",
@@ -24,22 +25,16 @@
     "paginator",
     "plugin"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiz0r/mongoose-x-cursor"
+  },
   "author": "Juan Colo <juan.colo@typeof.software>",
   "license": "MIT",
   "files": [
     "dist",
     "package.json"
   ],
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "eslint": "^8.55.0",
@@ -49,10 +44,11 @@
     "eslint-plugin-promise": "^6.0.0",
     "mongodb-memory-server": "^9.1.1",
     "tsup": "^8.0.1",
-    "typescript": "^5.3.3",
-    "vitest": "^1.0.4"
+    "typescript": "^4.9.5",
+    "vitest": "^1.0.4",
+    "mongoose": "^7.0.0"
   },
-  "dependencies": {
-    "mongoose": "^8.0.3"
+  "peerDependencies": {
+    "mongoose": "^7.0.0 || ^8.0.0"
   }
 }

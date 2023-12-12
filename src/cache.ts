@@ -12,16 +12,16 @@ export class MemoryCacheProvider<T> implements CacheProvider<T> {
   private cache: Record<string, CacheContent<T>>
   private readonly ttlMilliseconds: number
 
-  constructor (ttlMilliseconds: number = 60000) {
+  constructor(ttlMilliseconds: number = 60000) {
     this.cache = {}
     this.ttlMilliseconds = ttlMilliseconds
   }
 
-  set (key: string, value: T): void {
+  set(key: string, value: T): void {
     this.cache[key] = { value, expireAt: Date.now() + this.ttlMilliseconds }
   }
 
-  get (key: string): T | null {
+  get(key: string): T | null {
     const item = this.cache[key]
     if (item === undefined) {
       return null
