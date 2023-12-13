@@ -3,7 +3,6 @@ import mongoose from 'mongoose'
 import { MongoMemoryServer } from 'mongodb-memory-server'
 import UserModel from './model/user.model' // Asegúrate de importar tu modelo de usuario aquí
 import { generateRandomUser } from './user-mother'
-import { ImageModel } from './model/image.model'
 
 describe('Mongoose pagination test', () => {
   let mongoServer: MongoMemoryServer
@@ -23,66 +22,11 @@ describe('Mongoose pagination test', () => {
     await UserModel.deleteMany({})
   })
 
-  it('should get empty page', async () => {
-    ImageModel.create({
-      style: 'style',
-      name: 'name',
-      fileExtension: 'fileExtension',
-      status: 'status',
-      user: {
-        userName: 'userName',
-        guid: 'guid',
-        email: 'email'
-      },
-      createdBy: {
-        userName: 'userName',
-        guid: 'guid',
-        email: 'email'
-      },
-      created: new Date(),
-      lastUpdated: new Date(),
-      reviewedBy: {
-        userName: 'userName',
-        guid: 'guid',
-        email: 'email'
-      },
-      reviewDate: new Date(),
-      width: 1,
-      height: 1,
-      aimodel: 'aimodel',
-      processedImages: [
-        {
-          name: 'name',
-          fileExtension: 'fileExtension',
-          lastUpdated: new Date(),
-          approvedBy: 'approvedBy',
-          backgroundId: 'backgroundId'
-        }
-      ],
-      processedModels: ['processedModels'],
-      retry: 1
-    })
-
-    const page = await ImageModel.paginate({
-      limit: 1,
-      totalDocs: true,
-      totalDocsCache: true
-    })
-
-    console.log(page)
-
-  })
-
   it('should get first page', async () => {
-    const users = [
-      generateRandomUser(1),
-      generateRandomUser(2),
-      generateRandomUser(3)
-    ]
+    const users = [generateRandomUser(1), generateRandomUser(2), generateRandomUser(3)]
     await UserModel.create(users)
 
-    const paginationModel = UserModel
-    const page = await paginationModel.paginate({
+    const page = await UserModel.paginate({
       limit: 1,
       totalDocs: true,
       totalDocsCache: true
@@ -98,11 +42,7 @@ describe('Mongoose pagination test', () => {
   })
 
   it('should get second page', async () => {
-    const users = [
-      generateRandomUser(1),
-      generateRandomUser(2),
-      generateRandomUser(3)
-    ]
+    const users = [generateRandomUser(1), generateRandomUser(2), generateRandomUser(3)]
     await UserModel.create(users)
 
     const paginationModel = UserModel
@@ -124,11 +64,7 @@ describe('Mongoose pagination test', () => {
   })
 
   it('should get third page', async () => {
-    const users = [
-      generateRandomUser(1),
-      generateRandomUser(2),
-      generateRandomUser(3)
-    ]
+    const users = [generateRandomUser(1), generateRandomUser(2), generateRandomUser(3)]
     await UserModel.create(users)
 
     const paginationModel = UserModel
@@ -150,11 +86,7 @@ describe('Mongoose pagination test', () => {
   })
 
   it('should get previous page to second page (first page)', async () => {
-    const users = [
-      generateRandomUser(1),
-      generateRandomUser(2),
-      generateRandomUser(3)
-    ]
+    const users = [generateRandomUser(1), generateRandomUser(2), generateRandomUser(3)]
     await UserModel.create(users)
 
     const paginationModel = UserModel
@@ -176,11 +108,7 @@ describe('Mongoose pagination test', () => {
   })
 
   it('should get previous page to third page (second page)', async () => {
-    const users = [
-      generateRandomUser(1),
-      generateRandomUser(2),
-      generateRandomUser(3)
-    ]
+    const users = [generateRandomUser(1), generateRandomUser(2), generateRandomUser(3)]
     await UserModel.create(users)
 
     const paginationModel = UserModel
@@ -231,11 +159,7 @@ describe('Mongoose pagination test', () => {
   })
 
   it('should get first page without totalDocs', async () => {
-    const users = [
-      generateRandomUser(1),
-      generateRandomUser(2),
-      generateRandomUser(3)
-    ]
+    const users = [generateRandomUser(1), generateRandomUser(2), generateRandomUser(3)]
     await UserModel.create(users)
 
     const paginationModel = UserModel

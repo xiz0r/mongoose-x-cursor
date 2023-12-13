@@ -1,5 +1,5 @@
 import mongoose, { Schema, type Document } from 'mongoose'
-import paginationPlugin, { MemoryCacheProvider, PaginationModel } from '../../src'
+import paginationPlugin, { MemoryCacheProvider, type PaginationModel } from '../../src'
 
 const AllModels = ['ppmattingv2', 'ppmatting_512', 'ppmatting_1024', 'modnet', 'modnet_mobilenetv2', 'modnet_resnet50'] as const
 export type AiModel = (typeof AllModels)[number]
@@ -91,7 +91,7 @@ ImageSchema.index({ _id: 1, status: 1, style: 1, 'user.guid': 1 })
 ImageSchema.index({ _id: 1, status: 1, style: 1, 'user.email': 1 })
 ImageSchema.index({ _id: 1, status: 1, style: 1, 'user.email': 1, 'user.guid': 1, 'user.userName': 1 })
 
-// ImageSchema.plugin(paginationPlugin(new MemoryCacheProvider<number>())) 
+// ImageSchema.plugin(paginationPlugin(new MemoryCacheProvider<number>()))
 ImageSchema.plugin(paginationPlugin(new MemoryCacheProvider<number>(1))) // eslint-disable-line
 
 export const ImageModel = mongoose.model<Image, PaginationModel<Image>>('Image', ImageSchema)

@@ -1,12 +1,4 @@
-interface CacheContent<T> {
-  value: T
-  expireAt: number
-}
-
-export interface CacheProvider<T> {
-  set: (key: string, value: T) => void
-  get: (key: string) => T | null
-}
+import { type CacheContent, type CacheProvider } from './interfaces/cache-provider'
 
 export class MemoryCacheProvider<T> implements CacheProvider<T> {
   private cache: Record<string, CacheContent<T>>

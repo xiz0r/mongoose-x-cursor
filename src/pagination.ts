@@ -3,7 +3,7 @@ import {
   type Document,
   type Model,
   type FilterQuery,
-  SortOrder
+  type SortOrder
 } from 'mongoose'
 import { type CacheProvider, MemoryCacheProvider } from './cache'
 
@@ -43,14 +43,14 @@ export interface PaginationModel<T extends Document> extends Model<T> {
   paginate: (params: PaginationParams<T>) => Promise<PaginationResult<T>>
 }
 
-async function calcTotalDocs<T extends Document>(
+async function calcTotalDocs<T extends Document> (
   model: PaginationModel<T>,
   filter: FilterQuery<T>,
   totalDocsCache: boolean,
   cacheTotalCount: CacheProvider<number>,
   cacheKeyPrefix: string = ''
 ): Promise<number> {
-  function setCacheTotalCount(totalCount: number): number {
+  function setCacheTotalCount (totalCount: number): number {
     if (totalDocsCache) {
       cacheTotalCount.set(cacheKeyPrefix + JSON.stringify(filter), totalCount)
     }
@@ -69,7 +69,7 @@ async function calcTotalDocs<T extends Document>(
   }
 }
 
-async function calcNavigationProps<T extends Document>(
+async function calcNavigationProps<T extends Document> (
   model: PaginationModel<T>,
   query: FilterQuery<T>,
   documents: T[],
@@ -129,7 +129,7 @@ async function calcNavigationProps<T extends Document>(
   }
 }
 
-export function paginationPlugin<T extends Document>(
+export function paginationPlugin<T extends Document> (
   cache: CacheProvider<number> = new MemoryCacheProvider<number>()
 ): (schema: Schema<T>) => void {
   const cacheTotalCount = cache
