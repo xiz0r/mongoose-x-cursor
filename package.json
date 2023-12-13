@@ -1,6 +1,6 @@
 {
   "name": "mongoose-x-cursor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Opinionated mongoose plugin for cursor based pagination",
   "scripts": {
     "build": "tsup ./src --external mongoose --format cjs",

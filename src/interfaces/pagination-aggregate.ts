@@ -10,8 +10,8 @@ export interface AggregationPaginationParams<T> {
   group?: AggregationGroup<T>
   sort?: AggregationSort<T>
   limit: number
-  next?: string // Cursor para la siguiente página
-  prev?: string // Cursor para la página anterior
+  next?: string
+  prev?: string
 }
 
 export interface AggregationPaginationLogic<T> {
