@@ -9,6 +9,30 @@ export class MongooseAggregationPaginationLogic<T extends Document> implements A
   async aggregatePaginate(params: AggregationPaginationParams<T>): Promise<PaginationResult<T>> {
     const { match, group, sort, limit, next, prev } = params
 
+    let nextValue: string | object | undefined = undefined
+    let prevValue: string | object | undefined = undefined
+    if (group !== undefined) {
+      if (next !== undefined) {
+        try {
+          nextValue = JSON.parse(Buffer.from(next, 'base64').toString('ascii'))
+        } catch (error) { }
+
+        if (nextValue === undefined) {
+          nextValue = next
+        }
+      }
+
+      if (prev !== undefined) {
+        try {
+          prevValue = JSON.parse(Buffer.from(prev, 'base64').toString('ascii'))
+        } catch (error) { }
+
+        if (prevValue === undefined) {
+          prevValue = prev
+        }
+      }
+    }
+
     const basePipeline: any[] = []
 
     // Match
@@ -54,10 +78,27 @@ export class MongooseAggregationPaginationLogic<T extends Document> implements A
       results.pop()
     }
 
+    // if aggregation is grouped and the _id field is an object, we need to convert it to string
+    if (hasNext) {
+      if (typeof results[results.length - 1]._id === 'object') {
+        nextValue = Buffer.from(JSON.stringify(results[results.length - 1]._id)).toString('base64')
+      } else {
+        nextValue = results[results.length - 1]._id
+      }
+    }
+
+    if (hasPrev) {
+      if (typeof results[0]._id === 'object') {
+        prevValue = Buffer.from(JSON.stringify(results[0]._id)).toString('base64')
+      } else {
+        prevValue = results[0]._id
+      }
+    }
+
     return {
       data: results,
-      next: hasNext ? results[results.length - 1]._id : undefined,
-      prev: hasPrev ? results[0]._id : undefined,
+      next: nextValue as string | undefined,
+      prev: prevValue as string | undefined,
       hasNext,
       hasPrevious: hasPrev,
       limit,
