@@ -2,7 +2,7 @@ import { type FilterQuery, type SortOrder } from 'mongoose'
 import { type PaginationResult } from './pagination'
 
 export type AggregationMatch<T> = FilterQuery<T>
-export type AggregationGroup<T> = Record<string, any> // Definir según la lógica de agrupación
+export type AggregationGroup<T> = Record<string, any>
 export type AggregationSort<T> = { [key in keyof T]?: SortOrder }
 
 export interface AggregationPaginationParams<T> {

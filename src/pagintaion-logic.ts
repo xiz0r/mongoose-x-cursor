@@ -1,11 +1,17 @@
 import { type FilterQuery, type Model, type Document, type SortOrder } from 'mongoose'
-import { type PaginationInfo, type PaginationLogic, type PaginationParams, type PaginationResult, type PaginationSort } from './interfaces/pagination'
+import {
+  type PaginationInfo,
+  type PaginationLogic,
+  type PaginationParams,
+  type PaginationResult,
+  type PaginationSort
+} from './interfaces/pagination'
 import { type CacheProvider } from './interfaces/cache-provider'
 
 export class MongoosePaginationLogic<T extends Document> implements PaginationLogic<T> {
   constructor (private readonly model: Model<T>) {}
 
-  async paginate (params: PaginationParams<T>, cacheProvider?: CacheProvider<unknown>): Promise<PaginationResult<T>> {
+  async paginate (params: PaginationParams<T>, cacheProvider?: CacheProvider<number>): Promise<PaginationResult<T>> {
     const { next, prev, limit, sortFields, filter, select, totalDocs, totalDocsCache } = params
 
     const query: FilterQuery<T> = filter === undefined ? {} : { ...filter }
@@ -31,13 +37,12 @@ export class MongoosePaginationLogic<T extends Document> implements PaginationLo
       .sort(sort as Record<string, SortOrder>)
       .limit(pageLimit)
       .lean<T>()
+
     if (select !== undefined) {
       docsPromise.select(select as Record<string, number>); // eslint-disable-line
     }
 
-    const totalDocsPromise = totalDocs
-      ? this.calcTotalDocs(filter ?? {}, totalDocsCache, cacheProvider as CacheProvider<number>)
-      : Promise.resolve(undefined)
+    const totalDocsPromise = totalDocs ? this.calcTotalDocs(filter, totalDocsCache, cacheProvider) : Promise.resolve(undefined)
 
     const [documents, docsCount] = await Promise.all([docsPromise.exec(), totalDocsPromise]).catch((err) => {
       console.error(err)
@@ -59,27 +64,47 @@ export class MongoosePaginationLogic<T extends Document> implements PaginationLo
     return result
   }
 
-  async calcTotalDocs (filter: FilterQuery<T>, totalDocsCache: boolean, cacheProvider: CacheProvider<number>): Promise<number> {
+  /**
+   * Method used to calculate total documents
+   * @param filter query used to fetch documents
+   * @param totalDocsCache boolean used to enable/disable cache
+   * @param cacheProvider provider used to cache total documents
+   * @returns number
+   */
+  async calcTotalDocs (
+    filter: FilterQuery<T> | undefined,
+    totalDocsCache: boolean,
+    cacheProvider: CacheProvider<number> | undefined
+  ): Promise<number> {
     const cacheKeyPrefix = this.model.collection.name
 
     function setCacheTotalCount (totalCount: number): number {
-      if (totalDocsCache) {
+      if (totalDocsCache && cacheProvider !== undefined) {
         cacheProvider.set(cacheKeyPrefix + JSON.stringify(filter), totalCount)
       }
       return totalCount
     }
 
-    const cachedTotalCount = cacheProvider.get(cacheKeyPrefix + JSON.stringify(filter)) ?? 0
+    const cachedTotalCount = cacheProvider?.get(cacheKeyPrefix + JSON.stringify(filter)) ?? 0
 
     if (!totalDocsCache || cachedTotalCount === 0) {
       return filter === undefined
         ? await this.model.estimatedDocumentCount().then(setCacheTotalCount)
-        : await this.model.countDocuments(filter ?? {}).then(setCacheTotalCount)
+        : await this.model.countDocuments(filter).then(setCacheTotalCount)
     } else {
       return await Promise.resolve(cachedTotalCount)
     }
   }
 
+  /**
+   * Method used to calculate pagination navigation properties
+   * @param query query used to fetch documents
+   * @param documents result of the query
+   * @param limit
+   * @param prev _id used to fetch previous page
+   * @param next _id used to fetch next page
+   * @returns PaginationInfo
+   */
   async calcNavigationProps (query: FilterQuery<T>, documents: T[], limit: number, prev?: string, next?: string): Promise<PaginationInfo> {
     let hasNext = false
     let hasPrevious = false

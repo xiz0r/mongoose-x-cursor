@@ -4,9 +4,9 @@ import { type AggregationPaginationLogic, type AggregationPaginationParams } fro
 
 /* eslint-disable-line */
 export class MongooseAggregationPaginationLogic<T extends Document> implements AggregationPaginationLogic<T> {
-  constructor(private readonly model: Model<T>) { }
+  constructor (private readonly model: Model<T>) { }
 
-  async aggregatePaginate(params: AggregationPaginationParams<T>): Promise<PaginationResult<T>> {
+  async aggregatePaginate (params: AggregationPaginationParams<T>): Promise<PaginationResult<T>> {
     const { match, group, sort, limit, next, prev } = params
 
     const basePipeline: any[] = []

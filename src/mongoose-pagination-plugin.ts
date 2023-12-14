@@ -6,7 +6,7 @@ import { MongoosePaginationLogic } from './pagintaion-logic'
 import { MongooseAggregationPaginationLogic } from './aggregation-pagination-logic'
 
 /* eslint-disable */
-export function mongoosePaginationPlugin<T extends Document>(schema: Schema<T>, cacheProvider: CacheProvider<unknown>): void {
+export function mongoosePaginationPlugin<T extends Document>(schema: Schema<T>, cacheProvider: CacheProvider<number>): void {
   schema.statics.paginate = async function (params: PaginationParams<T>): Promise<PaginationResult<T>> {
     const paginationLogic = new MongoosePaginationLogic<T>(this);
     return await paginationLogic.paginate(params, cacheProvider);

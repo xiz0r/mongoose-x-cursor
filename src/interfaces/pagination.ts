@@ -33,5 +33,5 @@ export interface PaginationInfo {
 }
 
 export interface PaginationLogic<T extends Document> {
-  paginate: (params: PaginationParams<T>, cache?: CacheProvider<unknown>) => Promise<PaginationResult<T>>
+  paginate: (params: PaginationParams<T>, cache?: CacheProvider<number>) => Promise<PaginationResult<T>>
 }
