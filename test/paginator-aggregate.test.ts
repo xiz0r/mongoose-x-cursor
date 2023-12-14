@@ -2,7 +2,7 @@ import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import UserModel from './model/user.model';
-import { generateRandomUsersWithCategories } from './user-mother';
+import { generateRandomUsers, generateRandomUsersWithCategories } from './user-mother';
 
 describe('Mongoose pagination test', () => {
   let mongoServer: MongoMemoryServer;
@@ -48,21 +48,23 @@ describe('Mongoose pagination test', () => {
   });
 
   it('should get first page', async () => {
-    const users = generateRandomUsersWithCategories(['category1', 'category2', 'category3', 'category4'], 20);
+    const users = generateRandomUsers(10);
     await UserModel.create(users);
 
     const result = await UserModel.aggregatePaginate({
       group: {
-        _id: ['$category', "$email"],
+        _id: ['$category', "$username"],
         data: { $push: '$$ROOT' },
       },
       sort: { category: 1, email: 1 },
       limit: 2,
     });
 
+    console.log(JSON.stringify(result, null, 2));
+
     const result1 = await UserModel.aggregatePaginate({
       group: {
-        _id: ['$category', "$email"],
+        _id: ['$category', "$username"],
         data: { $push: '$$ROOT' },
       },
       next: result.next,
@@ -71,6 +73,8 @@ describe('Mongoose pagination test', () => {
     });
 
     console.log(JSON.stringify(result1, null, 2));
+
+
     // expect(result.data.length).toBe(2);
     // expect(result.hasNext).toBe(true);
     // expect(result.hasPrevious).toBe(false);

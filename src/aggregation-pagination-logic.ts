@@ -56,8 +56,8 @@ export class MongooseAggregationPaginationLogic<T extends Document> implements A
     const facetPipeline = {
       pagination: [
         ...basePipeline,
-        ...(prev !== undefined ? [{ $match: { _id: { $lt: prev } } }] : []),
-        ...(next !== undefined ? [{ $match: { _id: { $gt: next } } }] : []),
+        ...(prev !== undefined ? [{ $match: { _id: { $lt: prevValue } } }] : []),
+        ...(next !== undefined ? [{ $match: { _id: { $gt: nextValue } } }] : []),
         { $limit: limit + 1 }
       ],
       totalCount: [
