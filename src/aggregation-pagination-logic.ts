@@ -4,18 +4,18 @@ import { type AggregationPaginationLogic, type AggregationPaginationParams } fro
 
 /* eslint-disable-line */
 export class MongooseAggregationPaginationLogic<T extends Document> implements AggregationPaginationLogic<T> {
-  constructor (private readonly model: Model<T>) { }
+  constructor (private readonly model: Model<T>) {}
 
   async aggregatePaginate (params: AggregationPaginationParams<T>): Promise<PaginationResult<T>> {
     const { match, group, sort, limit, next, prev } = params
 
-    let nextValue: string | object | undefined = undefined
-    let prevValue: string | object | undefined = undefined
+    let nextValue: string | object | undefined
+    let prevValue: string | object | undefined
     if (group !== undefined) {
       if (next !== undefined) {
         try {
           nextValue = JSON.parse(Buffer.from(next, 'base64').toString('ascii'))
-        } catch (error) { }
+        } catch (error) {}
 
         if (nextValue === undefined) {
           nextValue = next
@@ -25,7 +25,7 @@ export class MongooseAggregationPaginationLogic<T extends Document> implements A
       if (prev !== undefined) {
         try {
           prevValue = JSON.parse(Buffer.from(prev, 'base64').toString('ascii'))
-        } catch (error) { }
+        } catch (error) {}
 
         if (prevValue === undefined) {
           prevValue = prev
@@ -60,31 +60,28 @@ export class MongooseAggregationPaginationLogic<T extends Document> implements A
         ...(next !== undefined ? [{ $match: { _id: { $gt: nextValue } } }] : []),
         { $limit: limit + 1 }
       ],
-      totalCount: [
-        ...basePipeline,
-        { $count: 'count' }
-      ]
+      totalCount: [...basePipeline, { $count: 'count' }]
     }
 
     const aggregated = await this.model.aggregate([{ $facet: facetPipeline }])
 
     const results = aggregated[0].pagination
-    const totalDocs = aggregated[0].totalCount[0] ? aggregated[0].totalCount[0].count : 0 // eslint-disable-line
+    const totalDocs = aggregated[0].totalCount[0] ? aggregated[0].totalCount[0].count : 0; // eslint-disable-line
 
     const hasNext = results.length > limit
     const hasPrev = next !== undefined
 
-    if (hasNext) {
-      results.pop()
-    }
-
     // if aggregation is grouped and the _id field is an object, we need to convert it to string
     if (hasNext) {
+      results.pop()
+
       if (typeof results[results.length - 1]._id === 'object') {
         nextValue = Buffer.from(JSON.stringify(results[results.length - 1]._id)).toString('base64')
       } else {
         nextValue = results[results.length - 1]._id
       }
+    } else {
+      nextValue = undefined
     }
 
     if (hasPrev) {
@@ -93,6 +90,8 @@ export class MongooseAggregationPaginationLogic<T extends Document> implements A
       } else {
         prevValue = results[0]._id
       }
+    } else {
+      prevValue = undefined
     }
 
     return {

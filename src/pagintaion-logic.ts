@@ -1,6 +1,6 @@
 import { type FilterQuery, type Model, type Document, type SortOrder } from 'mongoose'
 import {
-  type PaginationInfo,
+  type NavigationInfo,
   type PaginationLogic,
   type PaginationParams,
   type PaginationResult,
@@ -14,6 +14,8 @@ export class MongoosePaginationLogic<T extends Document> implements PaginationLo
   async paginate (params: PaginationParams<T>, cacheProvider?: CacheProvider<number>): Promise<PaginationResult<T>> {
     const { next, prev, limit, sortFields, filter, select, totalDocs, totalDocsCache } = params
 
+    const isEnableCache = totalDocsCache ?? false
+    const isEnableTotalDocs = totalDocs ?? false
     const query: FilterQuery<T> = filter === undefined ? {} : { ...filter }
     let sort: PaginationSort<T> = prev !== undefined ? { _id: -1 } : { _id: 1 }
 
@@ -42,7 +44,7 @@ export class MongoosePaginationLogic<T extends Document> implements PaginationLo
       docsPromise.select(select as Record<string, number>); // eslint-disable-line
     }
 
-    const totalDocsPromise = totalDocs ? this.calcTotalDocs(filter, totalDocsCache, cacheProvider) : Promise.resolve(undefined)
+    const totalDocsPromise = isEnableTotalDocs ? this.calcTotalDocs(filter, isEnableCache, cacheProvider) : Promise.resolve(undefined)
 
     const [documents, docsCount] = await Promise.all([docsPromise.exec(), totalDocsPromise]).catch((err) => {
       console.error(err)
@@ -54,7 +56,7 @@ export class MongoosePaginationLogic<T extends Document> implements PaginationLo
     const result: PaginationResult<T> = {
       data: documents as T[],
       next: navigationProperties.next,
-      prev: navigationProperties.previous,
+      prev: navigationProperties.prev,
       hasNext: navigationProperties.hasNext,
       hasPrevious: navigationProperties.hasPrevious,
       limit,
@@ -103,9 +105,9 @@ export class MongoosePaginationLogic<T extends Document> implements PaginationLo
    * @param limit
    * @param prev _id used to fetch previous page
    * @param next _id used to fetch next page
-   * @returns PaginationInfo
+   * @returns NavigationInfo
    */
-  async calcNavigationProps (query: FilterQuery<T>, documents: T[], limit: number, prev?: string, next?: string): Promise<PaginationInfo> {
+  async calcNavigationProps (query: FilterQuery<T>, documents: T[], limit: number, prev?: string, next?: string): Promise<NavigationInfo> {
     let hasNext = false
     let hasPrevious = false
     let nextId: string | undefined
@@ -116,7 +118,7 @@ export class MongoosePaginationLogic<T extends Document> implements PaginationLo
         hasNext: false,
         hasPrevious: false,
         next: undefined,
-        previous: undefined
+        prev: undefined
       }
     }
 
@@ -154,7 +156,7 @@ export class MongoosePaginationLogic<T extends Document> implements PaginationLo
       hasNext,
       hasPrevious,
       next: nextId,
-      previous: previousId
+      prev: previousId
     }
   }
 }

@@ -5,10 +5,10 @@
   "scripts": {
     "build": "tsup ./src --external mongoose --format cjs",
     "test": "vitest --config ./vitest.config.mts",
-    "lint": "eslint --ext .ts ./src ./test"
+    "lint": "eslint --ext .ts ./src ./test --fix"
   },
-  "main": "dist/index.js", 
-  "types": "dist/index.d.ts", 
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "keywords": [
     "mongoose",
     "cursor",

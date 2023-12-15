@@ -22,6 +22,7 @@ UserSchema.plugin(mongoosePaginationPlugin<User>, new MemoryCacheProvider<number
 
 UserSchema.index({ _id: 1, email: 1 })
 UserSchema.index({ _id: -1, email: -1 })
+UserSchema.index({ _id: 1, category: 1 })
 UserSchema.index({ category: 1 })
 
 const userModel = mongoose.model<User, PaginationModel<User>>('User', UserSchema)

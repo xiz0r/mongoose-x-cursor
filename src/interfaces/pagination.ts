@@ -11,25 +11,21 @@ export interface PaginationParams<T extends Document> {
   sortFields?: PaginationSort<T>
   filter?: FilterQuery<T>
   select?: PaginationSelect<T>
-  totalDocs: boolean
-  totalDocsCache: boolean
+  totalDocs?: boolean
+  totalDocsCache?: boolean
 }
 
-export interface PaginationResult<T> {
-  next?: string
-  prev?: string
+export interface NavigationInfo {
   hasNext?: boolean
   hasPrevious?: boolean
+  next?: string
+  prev?: string
+}
+
+export interface PaginationResult<T> extends NavigationInfo {
   data: T[]
   totalDocs?: number
   limit: number
-}
-
-export interface PaginationInfo {
-  hasNext?: boolean
-  hasPrevious?: boolean
-  next?: string
-  previous?: string
 }
 
 export interface PaginationLogic<T extends Document> {

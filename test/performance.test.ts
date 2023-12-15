@@ -2,7 +2,7 @@ import { describe, it, beforeAll, afterAll } from 'vitest'
 import mongoose from 'mongoose'
 import { MongoMemoryServer } from 'mongodb-memory-server'
 import UserModel, { type User } from './model/user.model'
-import { generateRandomUser } from './user-mother'
+import { generateRandomUser, generateRandomUsersWithCategories } from './user-mother'
 import * as fs from 'fs'
 import { type PaginationResult } from '../src/interfaces/pagination'
 
@@ -18,9 +18,13 @@ describe('Mongoose pagination performance test', () => {
     await mongoose.connect(uri)
 
     // Insertar 10,000 documentos
-    for (let i = 0; i < TOTAL_DOCS; i++) {
-      await UserModel.create(generateRandomUser(i))
-    }
+    // for (let i = 0; i < TOTAL_DOCS; i++) {
+    const users = generateRandomUsersWithCategories(
+      ['category1', 'category2', 'category3', 'category4', 'category5', 'category6', 'category7', 'category8', 'category9', 'category10'],
+      10000
+    )
+    await UserModel.insertMany(users)
+    // }
 
     const count = await UserModel.countDocuments()
     console.log(`Total documents: ${count}`)
@@ -75,5 +79,36 @@ describe('Mongoose pagination performance test', () => {
     } while (result?.hasNext ?? false)
 
     fs.writeFileSync(`performanceResultsCursor-${new Date().getTime()}.json`, JSON.stringify(performanceResults))
+  }, 90000)
+
+  it('performance paginate with aggregation', async () => {
+    let lastId: string | undefined
+    const performanceResults: Array<{ page: number, duration: number }> = []
+
+    let result: PaginationResult<User> | null = null
+    let page = 0
+
+    do {
+      const start = performance.now()
+
+      result = await UserModel.aggregatePaginate({
+        group: {
+          _id: '$category',
+          data: { $push: '$$ROOT' }
+        },
+        next: lastId,
+        sort: { category: 1 },
+        limit: 1
+      })
+
+      const end = performance.now()
+      const duration = end - start
+      performanceResults.push({ page, duration })
+
+      lastId = result.next
+      page++
+    } while (result?.hasNext ?? false)
+
+    fs.writeFileSync(`performanceResultsCursorAggretation-${new Date().getTime()}.json`, JSON.stringify(performanceResults))
   }, 90000)
 })
