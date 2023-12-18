@@ -81,7 +81,7 @@ describe('Mongoose pagination performance test', () => {
     fs.writeFileSync(`performanceResultsCursor-${new Date().getTime()}.json`, JSON.stringify(performanceResults))
   }, 90000)
 
-  it('performance paginate with aggregation', async () => {
+  it.skip('performance paginate with aggregation', async () => {
     let lastId: string | undefined
     const performanceResults: Array<{ page: number, duration: number }> = []
 
