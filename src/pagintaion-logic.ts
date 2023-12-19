@@ -9,9 +9,9 @@ import {
 import { type CacheProvider } from './interfaces/cache-provider'
 
 export class MongoosePaginationLogic<T extends Document> implements PaginationLogic<T> {
-  constructor(private readonly model: Model<T>) { }
+  constructor (private readonly model: Model<T>) { }
 
-  async paginate(params: PaginationParams<T>, cacheProvider?: CacheProvider<number>): Promise<PaginationResult<T>> {
+  async paginate (params: PaginationParams<T>, cacheProvider?: CacheProvider<number>): Promise<PaginationResult<T>> {
     const { next, prev, limit, sortFields, filter, select, totalDocs, totalDocsCache } = params
 
     const isEnableCache = totalDocsCache ?? false
@@ -73,14 +73,14 @@ export class MongoosePaginationLogic<T extends Document> implements PaginationLo
    * @param cacheProvider provider used to cache total documents
    * @returns number
    */
-  async calcTotalDocs(
+  async calcTotalDocs (
     filter: FilterQuery<T> | undefined,
     totalDocsCache: boolean,
     cacheProvider: CacheProvider<number> | undefined
   ): Promise<number> {
     const cacheKeyPrefix = this.model.collection.name
 
-    function setCacheTotalCount(totalCount: number): number {
+    function setCacheTotalCount (totalCount: number): number {
       if (totalDocsCache && cacheProvider !== undefined) {
         cacheProvider.set(cacheKeyPrefix + JSON.stringify(filter), totalCount)
       }
@@ -107,7 +107,7 @@ export class MongoosePaginationLogic<T extends Document> implements PaginationLo
    * @param next _id used to fetch next page
    * @returns NavigationInfo
    */
-  async calcNavigationProps(query: FilterQuery<T>, documents: T[], limit: number, prev?: string, next?: string): Promise<NavigationInfo> {
+  async calcNavigationProps (query: FilterQuery<T>, documents: T[], limit: number, prev?: string, next?: string): Promise<NavigationInfo> {
     let hasNext = false
     let hasPrevious = false
     let nextId: string | undefined
